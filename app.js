@@ -34,6 +34,7 @@
     elements = {
       appSummary: document.querySelector("#appSummary"),
       themeToggleButton: document.querySelector("#themeToggleButton"),
+      resetRecordsBtn: document.querySelector("#resetRecordsBtn"),
       dashboardView: document.querySelector("#dashboardView"),
       quizView: document.querySelector("#quizView"),
       
@@ -556,6 +557,37 @@
   function bindEvents() {
     // 主题切换
     elements.themeToggleButton.addEventListener("click", toggleTheme);
+
+    // 清空记录
+    elements.resetRecordsBtn.addEventListener("click", () => {
+      if (!confirm("确定要清空所有的刷题进度、错题本以及测验记录吗？此操作无法撤销。")) return;
+      
+      // 清理 localStorage
+      localStorage.removeItem(wrongStorageKey);
+      localStorage.removeItem(progressStorageKey);
+      localStorage.removeItem("mobile-quiz-last-score");
+      
+      // 重置内存状态
+      state.wrongIds = new Set();
+      state.progress = {};
+      state.lastScoreText = "暂无记录";
+      
+      // 如果当前正处于答题界面，重置答题状态并返回首页
+      if (!elements.quizView.hidden) {
+        clearInterval(state.timerId);
+        state.answersById = {};
+        state.checkedById = {};
+        state.currentIndex = 0;
+        state.examSubmitted = false;
+        elements.resultDialog.hidden = true;
+        elements.examTimerPanel.hidden = true;
+        showView("dashboard");
+      } else {
+        render();
+      }
+      
+      alert("记录已成功清空！");
+    });
 
     // 首页卡片及按钮
     elements.wrongCardButton.addEventListener("click", () => {

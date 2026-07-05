@@ -162,6 +162,34 @@ button, select {
   border-color: var(--primary);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reset-records-btn {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.reset-records-btn:hover {
+  background-color: var(--error-soft);
+  border-color: var(--error);
+  color: var(--error);
+  transform: translateY(-1px);
+}
+
 /* 容器视图 */
 .view-container {
   max-width: 1200px;
