@@ -628,6 +628,7 @@
       elements.configModalTitle.textContent = "错题复习设定";
       elements.configModeFormItem.hidden = false;
       elements.configTimeFormItem.hidden = true;
+      elements.configQuestionSize.value = "all"; // 默认选择全部错题
       elements.configModal.hidden = false;
     });
 
@@ -638,7 +639,11 @@
       const setName = btn.dataset.setName;
       state.mode = "practice";
       state.scope = { type: "set", setName: setName };
-      startSession();
+      elements.configModalTitle.textContent = `单元测试设定: ${setName}`;
+      elements.configModeFormItem.hidden = false;
+      elements.configTimeFormItem.hidden = true;
+      elements.configQuestionSize.value = "all"; // 默认选择整单元全部题目
+      elements.configModal.hidden = false;
     });
 
     // 快速开始选项
@@ -646,7 +651,9 @@
       state.mode = "practice";
       state.scope = { type: "all", setName: null };
       elements.configModalTitle.textContent = "随机抽题设定";
+      elements.configModeFormItem.hidden = false;
       elements.configTimeFormItem.hidden = true;
+      elements.configQuestionSize.value = "20"; // 默认20题
       elements.configModal.hidden = false;
     });
 
@@ -654,7 +661,9 @@
       state.mode = "exam";
       state.scope = { type: "all", setName: null };
       elements.configModalTitle.textContent = "限时考试设定";
+      elements.configModeFormItem.hidden = true;
       elements.configTimeFormItem.hidden = false;
+      elements.configQuestionSize.value = "20"; // 默认20题
       elements.configModal.hidden = false;
     });
 
