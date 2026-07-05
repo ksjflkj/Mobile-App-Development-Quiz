@@ -306,10 +306,17 @@
 
     const modeClass = state.mode === "study" ? "mode-study-badge" : (state.mode === "exam" ? "mode-exam-badge" : "mode-practice-badge");
     const modeText = state.mode === "study" ? "📖 背题模式" : (state.mode === "exam" ? "⏱️ 限时测验" : "✍️ 练习模式");
+    
+    // 如果不是考试模式，允许点击切换答题/背题模式
+    const isClickable = state.mode !== "exam";
+    const tag = isClickable ? "button" : "span";
+    const attrs = isClickable ? 'id="modeSwitchBtn" class="question-mode-inline-badge ' + modeClass + '" title="点击切换答题/背题模式" type="button"' : 'class="question-mode-inline-badge ' + modeClass + '"';
+    const switchIcon = isClickable ? ' <span style="font-size:10px;opacity:0.8;margin-left:2px;">⇄</span>' : '';
+    
     elements.questionMeta.innerHTML = `
       <span>${escapeHtml(question.set)}</span> · 
       <span>第 ${state.currentIndex + 1} / ${state.session.length} 题</span> · 
-      <span class="question-mode-inline-badge ${modeClass}">${modeText}</span>
+      <${tag} ${attrs}>${modeText}${switchIcon}</${tag}>
     `;
     
     // 在题目前面添加醒目的题目类型 badge 标签
@@ -677,6 +684,16 @@
       clearInterval(state.timerId);
       saveSessionRecord(false);
       showView("dashboard");
+    });
+
+    // 顶部模式快捷切换
+    elements.questionMeta.addEventListener("click", (event) => {
+      const btn = event.target.closest("#modeSwitchBtn");
+      if (!btn) return;
+      if (state.mode === "exam") return;
+      
+      state.mode = state.mode === "practice" ? "study" : "practice";
+      render();
     });
 
     elements.optionsList.addEventListener("click", (event) => {

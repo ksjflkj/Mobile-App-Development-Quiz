@@ -764,6 +764,20 @@ button, select {
   vertical-align: middle;
 }
 
+button.question-mode-inline-badge {
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+button.question-mode-inline-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow);
+  border-color: currentColor;
+  filter: brightness(0.95);
+}
+
 .mode-practice-badge {
   background-color: var(--primary-soft);
   color: var(--primary);
