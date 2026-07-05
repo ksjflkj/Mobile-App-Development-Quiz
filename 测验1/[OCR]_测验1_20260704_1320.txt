@@ -1,0 +1,842 @@
+2026-07-04 13:20:59
+
+≦ S60704-12363036_com.chaoxing.mobile.png ≧
+12:36 <
+?
+考试详情 1/40
+1.（单选题，2.5分）
+ ol 5Ail HD1 D 56
+图答题卡
+在uni-app中,配置tabbar的文件是？
+A. app.vue B. main.js
+C. pages.json D. manifest.json
+我的答案：
+c
+本题得分：2.5分
+图正确答案 C
+?
+答案解析
+tabbar的配置需要在pages.ison文件的"tabBar"节点中进行设置,其他文件不负责tabbar的配置
+·Al讲解
+上一题
+下一题
+
+≦ S60704-12363901_com.chaoxing.mobile.png ≧
+12:36 <
+?
+考试详情 2/40
+2.（单选题，2.5分）
+C 501 5il HD1 D 56
+图答题卡
+uni-app项目中，pages目录的作用是什么？　
+A.存放自定义组件 B.存放静态资源 C.存放页面文件 D.存放配置文件
+我的答案：
+C
+本题得分：2.5分
+图正确答案 C
+?
+答案解析
+uni-app项目中，pages目录用于存放应用的所有页面文件，每个页面通常包含.vue文件等相关资　
+源。
+上一题
+下一题
+·Al讲解
+
+≦ S60704-12364639_com.chaoxing.mobile.png ≧
+12:36 <
+?
+考试详情 3/40
+3.（单选题,2.5分)
+ 50l 5Ail HD1 D 56
+图答题卡
+tabBar中的color属性用干设置什么？ A.Tab上文字的默认颜色
+B.Tab的边框颜色　 C.Tab的选中颜色　 D.Tab的背景颜色　
+我的答案：
+A
+本题得分：2.5分
+图正确答案 A
+?
+答案解析
+根据课程中tabBar的属性说明，color属性用于设置Tab上文字的默认颜色，且为必填项。
+上一题
+下一题
+AI讲解
+
+≦ S60704-12364979_com.chaoxing.mobile.png ≧
+12:36 <
+?
+考试详情 4/40
+4.（单选题，2.5分）
+C 5801 5GAil HD1 D 56
+图答题卡
+在CSS中，用于设置元素透明度的属性是？
+A. visibility B. position C. display D. opacity
+我的答案：
+D
+本题得分：2.5分
+图正确答案 D
+?
+答案解析
+opacity属性用于设置元素的透明度，取值范围是
+0-1；visibility属性用于设置元素的可见性
+上一题
+下一题
+。AI讲解
+
+≦ S60704-12365203_com.chaoxing.mobile.png ≧
+12:36 <
+考试详情 5/40
+5.(单选题,2.5分)
+ ol 5Ail HD1 D 56
+图答题卡
+在uni-app中,引用外部is文件的正确方式是？ A.直接在页面中编写is代码,无需引用
+B.使用<script src="xxx.js"></script>标签引|入
+C.使用import语句引入 D.使用require语句引入
+我的答案：
+C
+本题得分：2.5分
+图正确答案 C
+?
+答案解析
+uni-app支持ES6的import语句引入外部is文件·吊　
+然部分场景下require也能使用,但标准且推
+上一题　
+下一题
+ Al讲解
+
+≦ S60704-12365420_com.chaoxing.mobile.png ≧
+12:36 <
+?
+考试详情 6/40
+6.（单选题，2.5分）
+ 5Gl 5GAil HD D 56
+图答题卡
+在flex布局中,设置主轴方向为垂直方向的属性值是？
+A. flex-direction: column
+B.align-items: center C. flex-direction: row
+D. justify-content: center 我的答案：
+A
+本题得分：2.5分　图
+正确答案 A
+?
+答案解析
+flex-direction:column用于设置flex容器的
+上一题
+下一题
+Al讲解 8
+
+≦ S60704-12365640_com.chaoxing.mobile.png ≧
+12:36 <
+0?
+考试详情 7/40
+7.(单选题,2.5分)
+ ol 5Ail HD1 D 56
+图答题卡
+在HBuilderX中,创建uni-app页面的正确方式是？ A.右键点击pages目录→新建→页面　
+B.直接在根目录下新建.vue文件　 C.直接在根目录下新建.html文件
+D.右键点击components目录→新建一→页面我的答案：
+A
+本题得分：2.5分
+图正确答案 A
+?
+答案解析
+创建uni-app页面的标准方式是在pages目录下衣
+键新建页面,HBuilderX会自动生成对应的.v
+上一题　
+下一题
+·AI讲解
+
+≦ S60704-12365882_com.chaoxing.mobile.png ≧
+12:36 <
+?
+考试详情 8/40
+8.（单选题,2.5分）
+C 501 5GAil HD1 D 56
+图答题卡
+以下哪个标签是uni-app中的基础视图容器组件?
+A. <view> B.<div>
+C.<image> D. <text>
+我的答案：
+A
+本题得分：2.5分
+图正确答案 A
+?
+答案解析
+<view>是uni-app中的基础视图容器组件,相当王
+ Al讲解
+HTML中的<div>;其他选项分别是文本组件
+上一题
+下一题
+
+≦ S60704-12370089_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 9/40
+9.（单选题，2.5分）
+ ol 5Ail HD1 D 56
+图答题卡
+globalStyle中的backgroundColor属性用于设置什么？
+A.页面背景色 B.窗口背景色 C.按钮背景色 D.导航栏背景色
+我的答案：
+x
+A
+本题得分：0分图
+正确答案 B
+?
+答案解析
+根据课程中的表格，backgroundColor属性
+上一题　
+下一题
+Al讲解
+
+≦ S60704-12370308_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+10/40
+10.（单选题，2.5分）
+C 501 5Ail HD1 D 56
+图答题卡
+uni-app的pages数组中第一项的作用是什么？ A.应用的启动页
+B.应用的个人中心页 C.应用的首页　
+D.应用的设置页面我的答案：
+A
+本题得分：2.5分　
+图 正确答案 A
+?
+答案解析
+课程中明确说明，pages数组中第一项表示应田
+ Al讲解
+的启动页，即应用打开时首先加载的页面
+上一题　
+下一题
+
+≦ S60704-12370524_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+11/40
+11.（单选题,2.5分）
+C 5801 5GAil HD1 D 56
+图答题卡
+uni-app中推荐使用哪种布局方式进行页面布局?
+A.Grid布局　 B.Table布局 C.Flex布局 D.Float布局
+我的答案：
+C
+本题得分：2.5分
+图 正确答案 C
+?
+答案解析
+根据知识目标，需要掌握flex布局，因此uni-anr 
+推荐使用Flex布局进行页面布局。
+上一题
+下一题
+·Al讲解
+
+≦ S60704-12370725_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+12/40
+12.(单选题,2.5分)
+ ol 5Ail HD1 D 56
+图答题卡
+在flex布局中,设置子元素在主轴上均匀分布的属性是？
+A. flex-wrap: wrap
+B. justify-content: space-between C. justify-content: space-around
+D. align-items: center 我的答案：
+C
+本题得分：2.5分图
+正确答案 C
+?
+答案解析
+justify-content:space-around会使子元素
+上一题　
+下一题
+AI讲解 8
+
+≦ S60704-12370928_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+13/40
+13.（单选题，2.5分）
+ ol 5Ail HD1 D 56
+图答题卡
+在uni-app的pages.json文件中，globalstyle下的 navigationBarTextStyle属性仅支持以下哪种取值？
+A. black/white B. dark/light C. red/blue D. any color
+我的答案：　
+A
+本题得分：2.5分图
+正确答案 A
+?
+答案解析上一题　
+下一题
+ Al讲解
+
+≦ S60704-12371140_com.chaoxing.mobile.png ≧
+12:37 <
+考试详情
+14/40
+14.（单选题，2.5分
+ 581 5GAi HD D 56
+图答题卡
+以下关于HBuilderX安装uni-app插件的操作步骤正确的是？
+A.打开HBuilderX一→点击"工具"→选择"插件安装"→搜索"uni-app"→点击安装　
+B.打开HBuilderX→点击"文件"→选择"新建项目"→搜索"uni-app"→点击安装　
+C.打开HBuilderX→点击"运行"→选择"运行到手机或模拟器"→搜索"uni-app"→点击安装　
+D.打开HBuilderX一→点击"帮助"→选择"在线升
+级"→搜索"uni-app"→点击安装　我的答案：
+A
+本题得分：2.5分　
+图正确答案上一题　
+下一题
+ Al讲解
+
+≦ S60704-12371369_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+15/40
+15.（单选题，2.5分）
+ ol 5Ail HDI D 56
+图答题卡
+在HBuilderX中创建uni-app项目时，以下哪个模板是默认提供的？
+A.默认模板 B.空模板 C.购物模板 D.新闻模板
+我的答案：　
+A
+本题得分：2.5分图
+正确答案 A
+?
+答案解析
+课程中提到新建uni-app项目时选择“默认模
+上一题　
+下一题
+AI讲解 8
+
+≦ S60704-12371573_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+16/40
+16.（单选题，2.5分）
+ 5Gl 5GAil HD D 56
+图答题卡
+以下哪个是uni-app推荐的开发工具？
+A. WebStorm B. HBuilderX
+C. Visual Studio Code
+D. Sublime Text 我的答案：
+B
+本题得分：2.5分　
+图 正确答案 B
+?
+答案解析
+根据能力目标，要求能够熟练使用HBuilderX开发
+工具，因此HBuilderX是uni-app推荐的开发
+上一题
+下一题
+。AI讲解
+
+≦ S60704-12371778_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+17/40
+17.（单选题，2.5分）
+ 50l 5Ail HD1 D 56
+图答题卡
+uni-app支持运行到以下哪种平台？
+A.多平台(包括小程序、安卓、iOS等） B.仅支持微信小程序
+C.仅支持iOS应用 D.仅支持安卓应用
+我的答案：
+A
+本题得分：2.5分　
+图 正确答案 A
+?
+答案解析
+uni-app的核心特性是一次开发多端部署,支持运行
+到微信小程序、支付宝小程序、安卓、iOS
+上一题　
+下一题
+。AI讲解
+
+≦ S60704-12371982_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+18/40
+18.（单选题,2.5分）
+C 5801 5GAil HD1 D 56
+图答题卡
+uni-app项目中,全局配置文件的名称是? A. main.js
+B. pages.json C. app.vue
+D. manifest.json 我的答案：
+B
+本题得分：2.5分
+图 正确答案 B
+?
+答案解析
+pages.json是uni-app的全局配置文件,用于配置而
+ Al讲解
+面路径、窗口样式等;main.js是入口文　
+上一题
+下一题
+
+≦ S60704-12372177_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+19/40
+19.（单选题,2.5分)
+ ol 5Ail HD1 D 56
+图答题卡
+以下哪个不是uni-app的基本开发流程步骤? A.运行项目
+B.编写Python代码 C.配置pages.json
+D.创建项目我的答案：
+B
+本题得分：2.5分
+图 正确答案 B
+?
+答案解析
+uni-app主要使用Vue.js语法和前端技术栈开发
+ Al讲解
+不涉及Python代码编写，因此编写Python1
+上一题　
+下一题
+
+≦ S60704-12372374_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 20/40
+20.（单选题，2.5分）
+ 501 5Ail HD1 D 56
+图答题卡
+uni-app项目中，static目录的作用是什么？ A.存放静态资源（如图片、视频等）
+B.存放自定义组件 C.存放页面文件　 D.存放配置文件
+我的答案：
+A
+本题得分：2.5分　
+图 正确答案 A
+?
+答案解析
+static目录是uni-app项目中用于存放静态资源的
+·Al讲解
+目录，包括图片、视频、音频等文件。
+上一题　
+下一题
+
+≦ S60704-12372593_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 21/40
+21.（多选题，2.5分）
+以下哪些是globalStyle中的属性？
+ 50l 5Ail HD1 D 56
+图答题卡
+A. navigationBarBackgroundColor B.backgroundColor
+C. enablePullDownRefresh D. tabBar
+我的答案：
+AB
+本题得分：1.3分　
+图 正确答案 ABC
+?
+答案解析
+根据课程中的表格，
+navigationBarBackgroundColor、
+上一题　
+下一题　
+ Al讲解
+
+≦ S60704-12372964_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 22/40
+22.（多选题,2.5分)
+以下属于uni-app项目目录的有？ A. static
+B. node_modules C. components D. pages
+我的答案：
+ACD
+本题得分：1.3分　
+图正确答案 ABCD
+?
+答案解析
+ 501 5Ail HD1 D 56
+图答题卡
+uni-app项目的常见目录包括pages(页面目录)
+components(组件目录)、static(静态资源
+上一题
+下一题
+ Al讲解
+
+≦ S60704-12373158_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 23/40
+23.(多选题,2.5分)
+ ol 5Ail HD1 D 56
+图答题卡
+以下属于flex布局中对齐属性的有？
+A. flex-direction B. align-items C. justify-content
+D. flex-wrap 我的答案： ×AB
+本题得分：0分　
+图 正确答案 BC
+?
+答案解析
+justify-content和align-items是flex布局中用王对
+齐的属性;flex-direction是设置主轴方向的属
+上一题　
+下一题
+。AI讲解
+
+≦ S60704-12373350_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+24/40
+24.（多选题,2.5分）
+HBuilderX支持的功能有？
+A.多端打包　 B.插件安装 C.项目运行 D.代码编辑
+我的答案：
+ABCD
+本题得分：2.5分
+图 正确答案 ABCD
+?
+答案解析
+C 5801 5GAil HD1 D 56
+图答题卡
+HBuilderX是uni-app的主要开发工具,支持代码编
+辑、项目运行、插件安装、多端打包等功能
+上一题
+下一题
+@ AI讲解
+
+≦ S60704-12373547_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 25/40
+25.（多选题，2.5分）
+ 5l 5GAil HD D 56
+图答题卡
+以下哪些属于uni-app的能力目标？ A.能够创建并运行uni-app项目
+B.能够使用Java语言开发后端接口 C.能够熟练使用HBuilderX开发工具
+D.能够开发多tab的应用我的答案：
+ACD
+本题得分：2.5分
+图正确答案 ACD
+?
+答案解析
+课程中的能力目标包括熟练使用HBuilderX、创建
+并运行项目、开发多tab应用，而Java后端
+上一题　
+下一题
+·AI讲解
+
+≦ S60704-12373749_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+26/40
+26.（多选题，2.5分）
+ ol 5Ail HD1 D 56
+图答题卡
+pages数组中的每个页面配置对象包含哪些属性？
+A. style B. title c.icon D. path
+我的答案：
+AD
+本题得分：2.5分图
+正确答案 AD
+?
+答案解析
+根据课程中的pages数组示例，每人页面配
+上一题　
+下一题
+8
+A/讲解
+
+≦ S60704-12373951_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 27/40
+27.（多选题，2.5分）
+ 5G1 5GAi HD D 56
+图答题卡
+以下属于template标签相关知识点的有？
+A.模板的定义 B.模板的使用
+C.模板的动画效果
+D.模板的作用域我的答案：
+ABD
+本题得分：2.5分　
+图 正确答案 ABD
+?
+答案解析
+template标签主要涉及模板的定义、使用和作用
+域等方面；模板的动画效果通常不是templ
+上一题　
+下一题
+@ AI讲解
+
+≦ S60704-12374151_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 28/40
+28.(多选题,2.5分)
+C 5801 5GAil HD1 D 56
+图答题卡
+uni-app中使用flex布局可以实现以下哪些效果?
+A.等分布局 B.水平居中 C.固定定位 D.垂直居中
+我的答案：
+ABD
+本题得分：2.5分
+图 正确答案 ABD
+?
+答案解析
+Flex布局主要用于实现弹性盒模型的布局效果
+包括水平居中、垂直居中、等分布局等，
+上一题　
+下一题
+ Al讲解
+
+≦ S60704-12374351_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情 29/40
+29.(多选题,2.5分)
+C 581 5GAil HDE  56
+图答题卡
+pages.json文件可以配置的内容包括？
+A.应用名称 B.窗口样式 C.tabbar D.页面路径　
+我的答案：
+BCD
+本题得分：2.5分
+图 正确答案 BCD
+?
+答案解析
+pages.json可以配置页面路径、窗口样式、 tabbar等;应用名称的配置在manifest.json
+上一题
+下一题
+? Al讲解
+
+≦ S60704-12374546_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+30/40
+30.（多选题，2.5分）
+ 501 5Ail HD1 D 56
+图答题卡
+以下哪些属于uni-app的知识目标？
+A.掌握uni-app项目搭建 B.掌握Java后端开发
+C．了解uni-app的发展历程　
+D.熟悉uni-app项目的开发工具　我的答案：
+ACD
+本题得分：2.5分　
+图正确答案 ACD
+?
+答案解析
+课程中的知识目标明确包括了解发展历程开发工具、掌握项目搭建，Java后端开发
+上一题
+下一题
+熟悉
+ Al讲解
+
+≦ S60704-12374739_com.chaoxing.mobile.png ≧
+12:37 <
+考试详情
+31/40
+31.（判断题，2.5分）
+ ol 5Ail HD1 D 56
+图答题卡
+uni-app的pages数组中第一项是应用的启动页。
+A.对 B.错
+我的答案：
+对
+本题得分：2.5分图正确答案
+对?
+答案解析
+课程中明确说明pages数组中第一项表示应用的启动页，因此该说法正确。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12374942_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+32/40
+32.（判断题，2.5分）
+ ol 5Ail HD1 D 55
+图答题卡
+uni-app项目中,manifest.json是页面配置文件。
+A.对 B.错
+我的答案：
+错
+本题得分：2.5分
+图正确答案错
+答案解析
+manifest.json是uni-app的应用配置文件,用于配置应用名称、图标等;页面配置文件是pages.json。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12375135_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+33/40
+33.（判断题，2.5分）
+ ol 5Ail HD1 D 55
+图答题卡
+flex布局中,flex-direction的默认值是column。
+A.对 B.错
+我的答案：
+错
+本题得分：2.5分图正确答案
+错?
+答案解析
+flex-direction的默认值是row(水平方向),column是垂直方向,不是默认值。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12375317_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+34/40
+34.（判断题，2.5分）
+ ol 5Ail HDI D 55
+图答题卡
+tabbar的list数组中,每个项必须包含pagePath和 text属性。
+A.对 B.错
+我的答案： ×错
+本题得分：0分图
+正确答案对
+答案解析
+配置tabbar时,list数组中的每个项必须指定
+pagePath(页面路径)和text(选项文字),否则tabbar 无法正常显示。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12375510_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+35/40
+35.（判断题，2.5分）
+ 501 5Ail HD1 D 55
+图答题卡
+globalStyle中的navigationBarTextStyle属性可以设置为任意颜色值。
+A.对 B.错
+我的答案：
+错
+本题得分：2.5分　
+图正确答案错
+）答案解析?
+根据课程内容，navigationBarTextStyle属性仅支持black和white两种取值，不能设置为任意颜色值，因此该说法错误。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12375700_com.chaoxing.mobile.png ≧
+12:37 <
+?
+考试详情
+36/40
+36.（判断题，2.5分）
+ ol 5Ail HD1 D 55
+图答题卡
+HBuilderX是uni-app推荐的开发工具。
+A.对 B.错
+我的答案：
+对
+本题得分：2.5分
+图正确答案对
+答案解析
+能力目标中要求能够熟练使用HBuilderX开发工具，因此HBuilderX是推荐的开发工具，该说法正确。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12375941_com.chaoxing.mobile.png ≧
+12:37 <
+考试详情
+37/40
+37.（判断题，2.5分）
+ ol 5Ail HD1 D 55
+图答题卡
+uni-app只能运行到小程序平台,不能运行到原生应
+用平台。 A.对 B.错
+我的答案：　
+错
+本题得分：2.5 分图
+正确答案错
+?
+答案解析
+uni-app支持多平台运行,包括小程序、安卓、ios 等原生应用平台。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12380130_com.chaoxing.mobile.png ≧
+12:38 <
+?
+考试详情
+38/40
+38.(判断题,2.5分)
+ ol 5Ail HD1 D 55
+图答题卡
+uni-app项目中的pages目录用于存放静态资源。
+A.对 B.错
+我的答案：
+错
+本题得分：2.5分
+图正确答案错
+?
+答案解析
+pages目录用于存放页面文件，静态资源存放在 static目录中，因此该说法错误。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12380323_com.chaoxing.mobile.png ≧
+12:38 <
+?
+考试详情
+39/40
+39.(判断题,2.5分)
+C 501 5il HD2 D 55
+图答题卡
+在uni-app中,可以直接使用HTML的<script>标签引入外部is文件。
+A.对 B.错
+我的答案：
+错
+本题得分：2.5分图
+正确答案
+错?
+答案解析
+uni-app推荐使用ES6的import语句引入外部js文件,不推荐使用HTML的<script>标签引I入方式。
+ Al讲解
+上一题
+下一题
+
+≦ S60704-12380518_com.chaoxing.mobile.png ≧
+12:38 <
+?
+考试详情
+40/40
+40.（判断题，2.5分）
+ ol 5Ail HD1 D 55
+图答题卡
+tabBar配置属于globalStyle的一部分。
+A.对 B.错
+我的答案： ×　对　
+本题得分：0分
+图正确答案错
+答案解析
+tabBar是pages.json中的独立配置项，与
+globalStyle并列，不属于globalStyle的属性，因此该说法错误。
+ Al讲解
+上一题
+下一题
+

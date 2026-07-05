@@ -1,0 +1,4018 @@
+// 移动应用开发题库自动生成的JS数据源
+window.QUIZ_QUESTIONS = [
+  {
+    "id": "quiz1-001",
+    "set": "测验1",
+    "number": 1,
+    "type": "single",
+    "question": "在uni-app中,配置tabBar的文件是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "app.vue"
+      },
+      {
+        "key": "B",
+        "text": "main.js"
+      },
+      {
+        "key": "C",
+        "text": "pages.json"
+      },
+      {
+        "key": "D",
+        "text": "manifest.json"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "tabBar的配置需要在pages.json文件的\"tabBar\"节点中进行设置,其他文件不负责tabBar的配置",
+    "source": "S60704-12363036_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-002",
+    "set": "测验1",
+    "number": 2,
+    "type": "single",
+    "question": "uni-app项目中，pages目录的作用是什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "存放自定义组件"
+      },
+      {
+        "key": "B",
+        "text": "存放静态资源"
+      },
+      {
+        "key": "C",
+        "text": "存放页面文件"
+      },
+      {
+        "key": "D",
+        "text": "存放配置文件"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "uni-app项目中，pages目录用于存放应用的所有页面文件，每个页面通常包含.vue文件等相关资源。",
+    "source": "S60704-12363901_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-003",
+    "set": "测验1",
+    "number": 3,
+    "type": "single",
+    "question": "tabBar中的color属性用于设置什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tab上文字的默认颜色"
+      },
+      {
+        "key": "B",
+        "text": "Tab的边框颜色"
+      },
+      {
+        "key": "C",
+        "text": "Tab的选中颜色"
+      },
+      {
+        "key": "D",
+        "text": "Tab的背景颜色"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "根据课程中tabBar的属性说明，color属性用于设置Tab上文字的默认颜色，且为必填项。",
+    "source": "S60704-12364639_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-004",
+    "set": "测验1",
+    "number": 4,
+    "type": "single",
+    "question": "在CSS中，用于设置元素透明度的属性是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "visibility"
+      },
+      {
+        "key": "B",
+        "text": "position"
+      },
+      {
+        "key": "C",
+        "text": "display"
+      },
+      {
+        "key": "D",
+        "text": "opacity"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "opacity属性用于设置元素的透明度，取值范围是0-1；visibility属性用于设置元素的可见性",
+    "source": "S60704-12364979_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-005",
+    "set": "测验1",
+    "number": 5,
+    "type": "single",
+    "question": "在uni-app中,引用外部js文件的正确方式是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "直接在页面中编写js代码,无需引用"
+      },
+      {
+        "key": "B",
+        "text": "使用<script src=\"xxx.js\"></script>标签引入"
+      },
+      {
+        "key": "C",
+        "text": "使用import语句引入"
+      },
+      {
+        "key": "D",
+        "text": "使用require语句引入"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "uni-app支持ES6的import语句引入外部js文件。虽然部分场景下require也能使用，但标准且推荐的方式是使用import语句。",
+    "source": "S60704-12365203_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-006",
+    "set": "测验1",
+    "number": 6,
+    "type": "single",
+    "question": "在flex布局中，设置主轴方向为垂直方向的属性值是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "flex-direction: column"
+      },
+      {
+        "key": "B",
+        "text": "align-items: center"
+      },
+      {
+        "key": "C",
+        "text": "flex-direction: row."
+      },
+      {
+        "key": "D",
+        "text": "justify-content: center"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "flex-direction: column用于设置flex容器的主轴方向为垂直方向。",
+    "source": "S60704-12365420_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-007",
+    "set": "测验1",
+    "number": 7,
+    "type": "single",
+    "question": "在HBuilderX中,创建uni-app页面的正确方式是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "右键点击pages目录→新建→页面"
+      },
+      {
+        "key": "B",
+        "text": "直接在根目录下新建.vue文件"
+      },
+      {
+        "key": "C",
+        "text": "直接在根目录下新建.html文件"
+      },
+      {
+        "key": "D",
+        "text": "右键点击components目录→新建→页面"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "创建uni-app页面的标准方式是在pages目录下右键新建页面，HBuilderX会自动生成对应的.vue文件。",
+    "source": "S60704-12365640_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-008",
+    "set": "测验1",
+    "number": 8,
+    "type": "single",
+    "question": "以下哪个标签是uni-app中的基础视图容器组件?",
+    "options": [
+      {
+        "key": "A",
+        "text": "<view>"
+      },
+      {
+        "key": "B",
+        "text": "<div>"
+      },
+      {
+        "key": "C",
+        "text": "<image>"
+      },
+      {
+        "key": "D",
+        "text": "<text>"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "<view>是uni-app中的基础视图容器组件,相当于HTML中的<div>;其他选项分别是文本组件",
+    "source": "S60704-12365882_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-009",
+    "set": "测验1",
+    "number": 9,
+    "type": "single",
+    "question": "globalStyle中的backgroundColor属性用于设置什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "页面背景色"
+      },
+      {
+        "key": "B",
+        "text": "窗口背景色"
+      },
+      {
+        "key": "C",
+        "text": "按钮背景色"
+      },
+      {
+        "key": "D",
+        "text": "导航栏背景色"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "根据课程中的表格，backgroundColor属性用于设置窗口背景色。",
+    "source": "S60704-12370089_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-010",
+    "set": "测验1",
+    "number": 10,
+    "type": "single",
+    "question": "uni-app的pages数组中第一项的作用是什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "应用的启动页"
+      },
+      {
+        "key": "B",
+        "text": "应用的个人中心页"
+      },
+      {
+        "key": "C",
+        "text": "应用的首页"
+      },
+      {
+        "key": "D",
+        "text": "应用的设置页面"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "课程中明确说明，pages数组中第一项表示应用的启动页，即应用打开时首先加载的页面",
+    "source": "S60704-12370308_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-011",
+    "set": "测验1",
+    "number": 11,
+    "type": "single",
+    "question": "uni-app中推荐使用哪种布局方式进行页面布局?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Grid布局"
+      },
+      {
+        "key": "B",
+        "text": "Table布局"
+      },
+      {
+        "key": "C",
+        "text": "Flex布局"
+      },
+      {
+        "key": "D",
+        "text": "Float布局"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "根据知识目标，需要掌握flex布局，因此uni-app推荐使用Flex布局进行页面布局。",
+    "source": "S60704-12370524_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-012",
+    "set": "测验1",
+    "number": 12,
+    "type": "single",
+    "question": "在flex布局中，设置子元素在主轴上均匀分布的属性是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "flex-wrap: wrap"
+      },
+      {
+        "key": "B",
+        "text": "justify-content: space-between"
+      },
+      {
+        "key": "C",
+        "text": "justify-content: space-around"
+      },
+      {
+        "key": "D",
+        "text": "align-items: center"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "justify-content: space-around会使子元素在主轴上均匀分布。",
+    "source": "S60704-12370725_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-013",
+    "set": "测验1",
+    "number": 13,
+    "type": "single",
+    "question": "在uni-app的pages.json文件中，globalStyle下的 navigationBarTextStyle属性仅支持以下哪种取值？",
+    "options": [
+      {
+        "key": "A",
+        "text": "black/white"
+      },
+      {
+        "key": "B",
+        "text": "dark/light"
+      },
+      {
+        "key": "C",
+        "text": "red/blue"
+      },
+      {
+        "key": "D",
+        "text": "any color"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "navigationBarTextStyle属性仅支持black和white两种取值。",
+    "source": "S60704-12370928_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-014",
+    "set": "测验1",
+    "number": 14,
+    "type": "single",
+    "question": "以下关于HBuilderX安装uni-app插件的操作步骤正确的是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "打开HBuilderX→点击\"工具\"→选择\"插件安装\"→搜索\"uni-app\"→点击安装"
+      },
+      {
+        "key": "B",
+        "text": "打开HBuilderX→点击\"文件\"→选择\"新建项目\"→搜索\"uni-app\"→点击安装"
+      },
+      {
+        "key": "C",
+        "text": "打开HBuilderX→点击\"运行\"→选择\"运行到手机或模拟器\"→搜索\"uni-app\"→点击安装"
+      },
+      {
+        "key": "D",
+        "text": "打开HBuilderX→点击\"帮助\"→选择\"在线升级\"→搜索\"uni-app\"→点击安装"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "在HBuilderX中安装uni-app插件，应通过“工具”菜单进入插件安装，搜索uni-app并点击安装。",
+    "source": "S60704-12371140_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-015",
+    "set": "测验1",
+    "number": 15,
+    "type": "single",
+    "question": "在HBuilderX中创建uni-app项目时，以下哪个模板是默认提供的？",
+    "options": [
+      {
+        "key": "A",
+        "text": "默认模板"
+      },
+      {
+        "key": "B",
+        "text": "空模板"
+      },
+      {
+        "key": "C",
+        "text": "购物模板"
+      },
+      {
+        "key": "D",
+        "text": "新闻模板"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "课程中提到新建uni-app项目时选择“默认模",
+    "source": "S60704-12371369_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-016",
+    "set": "测验1",
+    "number": 16,
+    "type": "single",
+    "question": "以下哪人是uni-app推荐的开发工具？",
+    "options": [
+      {
+        "key": "A",
+        "text": "WebStorm"
+      },
+      {
+        "key": "B",
+        "text": "HBuilderX"
+      },
+      {
+        "key": "C",
+        "text": "Visual Studio Code"
+      },
+      {
+        "key": "D",
+        "text": "Sublime Text"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "根据能力目标，要求能够熟练使用HBuilderX开发工具，因此HBuilderX是uni-app推荐的开发",
+    "source": "S60704-12371573_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-017",
+    "set": "测验1",
+    "number": 17,
+    "type": "single",
+    "question": "uni-app支持运行到以下哪种平台？",
+    "options": [
+      {
+        "key": "A",
+        "text": "多平台(包括小程序、安卓、iOS等）"
+      },
+      {
+        "key": "B",
+        "text": "仅支持微信小程序"
+      },
+      {
+        "key": "C",
+        "text": "仅支持iOS应用"
+      },
+      {
+        "key": "D",
+        "text": "仅支持安卓应用"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app的核心特性是一次开发多端部署,支持运行到微信小程序、支付宝小程序、安卓、iOS",
+    "source": "S60704-12371778_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-018",
+    "set": "测验1",
+    "number": 18,
+    "type": "single",
+    "question": "uni-app项目中,全局配置文件的名称是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "main.js"
+      },
+      {
+        "key": "B",
+        "text": "pages.json"
+      },
+      {
+        "key": "C",
+        "text": "app.vue"
+      },
+      {
+        "key": "D",
+        "text": "manifest.json"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "pages.json是uni-app的全局配置文件，用于配置页面路径、窗口样式等；main.js是入口文件。",
+    "source": "S60704-12371982_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-019",
+    "set": "测验1",
+    "number": 19,
+    "type": "single",
+    "question": "以下哪个不是uni-app的基本开发流程步骤？",
+    "options": [
+      {
+        "key": "A",
+        "text": "运行项目"
+      },
+      {
+        "key": "B",
+        "text": "编写Python代码"
+      },
+      {
+        "key": "C",
+        "text": "配置pages.json"
+      },
+      {
+        "key": "D",
+        "text": "创建项目"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app主要使用Vue.js语法和前端技术栈开发不涉及Python代码编写，因此编写Python",
+    "source": "S60704-12372177_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-020",
+    "set": "测验1",
+    "number": 20,
+    "type": "single",
+    "question": "uni-app项目中，static目录的作用是什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "存放静态资源（如图片、视频等）"
+      },
+      {
+        "key": "B",
+        "text": "存放自定义组件"
+      },
+      {
+        "key": "C",
+        "text": "存放页面文件"
+      },
+      {
+        "key": "D",
+        "text": "存放配置文件"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "static目录是uni-app项目中用于存放静态资源的目录，包括图片、视频、音频等文件。",
+    "source": "S60704-12372374_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-021",
+    "set": "测验1",
+    "number": 21,
+    "type": "multiple",
+    "question": "以下哪些是globalStyle中的属性？",
+    "options": [
+      {
+        "key": "A",
+        "text": "navigationBarBackgroundColor"
+      },
+      {
+        "key": "B",
+        "text": "backgroundColor"
+      },
+      {
+        "key": "C",
+        "text": "enablePuliDownRefresh"
+      },
+      {
+        "key": "D",
+        "text": "tabBar"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "根据课程中的表格，navigationBarBackgroundColor.",
+    "source": "S60704-12372593_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-022",
+    "set": "测验1",
+    "number": 22,
+    "type": "multiple",
+    "question": "以下属于uni-app项目目录的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "static"
+      },
+      {
+        "key": "B",
+        "text": "node_modules"
+      },
+      {
+        "key": "C",
+        "text": "components"
+      },
+      {
+        "key": "D",
+        "text": "pages"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app项目的常见目录包括pages(页面目录)components(组件目录)、static(静态资源E",
+    "source": "S60704-12372964_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-023",
+    "set": "测验1",
+    "number": 23,
+    "type": "multiple",
+    "question": "以下属于flex布局中对齐属性的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "flex-direction"
+      },
+      {
+        "key": "B",
+        "text": "align-items"
+      },
+      {
+        "key": "C",
+        "text": "justify-content"
+      },
+      {
+        "key": "D",
+        "text": "flex-wrap"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanation": "justify-content和align-items是flex布局中用于对齐的属性；flex-direction用于设置主轴方向，flex-wrap用于换行。",
+    "source": "S60704-12373158_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-024",
+    "set": "测验1",
+    "number": 24,
+    "type": "multiple",
+    "question": "HBuilderX支持的功能有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "多端打包"
+      },
+      {
+        "key": "B",
+        "text": "插件安装"
+      },
+      {
+        "key": "C",
+        "text": "项目运行"
+      },
+      {
+        "key": "D",
+        "text": "代码编辑"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "HBuilderX是uni-app的主要开发工具,支持代码编辑、项目运行、插件安装、多端打包等功能",
+    "source": "S60704-12373350_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-025",
+    "set": "测验1",
+    "number": 25,
+    "type": "multiple",
+    "question": "以下哪些属于uni-app的能力目标?",
+    "options": [
+      {
+        "key": "A",
+        "text": "能够创建并运行uni-app项目"
+      },
+      {
+        "key": "B",
+        "text": "能够使用Java语言开发后端接口"
+      },
+      {
+        "key": "C",
+        "text": "能够熟练使用HBuilderX开发工具"
+      },
+      {
+        "key": "D",
+        "text": "能够开发多tab的应用"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "课程中的能力目标包括熟练使用HBuilderX、创建并运行项目、开发多tab应用，而Java后端",
+    "source": "S60704-12373547_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-026",
+    "set": "测验1",
+    "number": 26,
+    "type": "multiple",
+    "question": "pages数组中的每个页面配置对象包含哪些属性？",
+    "options": [
+      {
+        "key": "A",
+        "text": "style"
+      },
+      {
+        "key": "B",
+        "text": "title"
+      },
+      {
+        "key": "C",
+        "text": "icon"
+      },
+      {
+        "key": "D",
+        "text": "path"
+      }
+    ],
+    "answer": [
+      "A",
+      "D"
+    ],
+    "explanation": "根据课程中的pages数组示例，每个页面配",
+    "source": "S60704-12373749_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-027",
+    "set": "测验1",
+    "number": 27,
+    "type": "multiple",
+    "question": "以下属于template标签相关知识点的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "模板的定义"
+      },
+      {
+        "key": "B",
+        "text": "模板的使用"
+      },
+      {
+        "key": "C",
+        "text": "模板的动画效果"
+      },
+      {
+        "key": "D",
+        "text": "模板的作用域"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "template标签主要涉及模板的定义、使用和作用域等方面；模板的动画效果通常不是templ",
+    "source": "S60704-12373951_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-028",
+    "set": "测验1",
+    "number": 28,
+    "type": "multiple",
+    "question": "uni-app中使用flex布局可以实现以下哪些效果?",
+    "options": [
+      {
+        "key": "A",
+        "text": "等分布局"
+      },
+      {
+        "key": "B",
+        "text": "水平居中"
+      },
+      {
+        "key": "C",
+        "text": "固定定位"
+      },
+      {
+        "key": "D",
+        "text": "垂直居中"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Flex布局主要用于实现弹性盒模型的布局效果，包括水平居中、垂直居中、等分布局等。",
+    "source": "S60704-12374151_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-029",
+    "set": "测验1",
+    "number": 29,
+    "type": "multiple",
+    "question": "pages.json文件可以配置的内容包括？",
+    "options": [
+      {
+        "key": "A",
+        "text": "应用名称"
+      },
+      {
+        "key": "B",
+        "text": "窗口样式"
+      },
+      {
+        "key": "C",
+        "text": "tabBar"
+      },
+      {
+        "key": "D",
+        "text": "页面路径"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "pages.json可以配置页面路径、窗口样式、tabBar等；应用名称的配置在manifest.json中。",
+    "source": "S60704-12374351_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-030",
+    "set": "测验1",
+    "number": 30,
+    "type": "multiple",
+    "question": "以下哪些属于uni-app的知识目标?",
+    "options": [
+      {
+        "key": "A",
+        "text": "掌握uni-app项目搭建"
+      },
+      {
+        "key": "B",
+        "text": "掌握Java后端开发"
+      },
+      {
+        "key": "C",
+        "text": "了解uni-app的发展历程"
+      },
+      {
+        "key": "D",
+        "text": "熟悉uni-app项目的开发工具"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "熟悉课程中的知识目标明确包括了解发展历程，开发工具、掌握项目搭建，Java后端开发",
+    "source": "S60704-12374546_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-031",
+    "set": "测验1",
+    "number": 31,
+    "type": "judge",
+    "question": "uni-app的pages数组中第一项是应用的启动页。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "课程中明确说明pages数组中第一项表示应用的启动页，因此该说法正确。",
+    "source": "S60704-12374739_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-032",
+    "set": "测验1",
+    "number": 32,
+    "type": "judge",
+    "question": "uni-app项目中,manifest.json是页面配置文件。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "manifest.json是uni-app的应用配置文件,用于配置应用名称、图标等;页面配置文件是pages.json。",
+    "source": "S60704-12374942_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-033",
+    "set": "测验1",
+    "number": 33,
+    "type": "judge",
+    "question": "flex布局中,flex-direction的默认值是column。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "flex-direction的默认值是row(水平方向),column是垂直方向不是默认值。",
+    "source": "S60704-12375135_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-034",
+    "set": "测验1",
+    "number": 34,
+    "type": "judge",
+    "question": "tabBar的list数组中,每个项必须包含pagePath和 text属性。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "配置tabBar时.list数组中的每个项必须指定pagePath(页面路径)和text(选项文字),否则tabBar无法正常显示。",
+    "source": "S60704-12375317_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-035",
+    "set": "测验1",
+    "number": 35,
+    "type": "judge",
+    "question": "globalStyle中的navigationBarTextStyle属性可以设置为任意颜色值。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "根据课程内容，navigationBarTextStyle属性仅支持black和white两种取值，不能设置为任意颜色值，因此该说法错误。",
+    "source": "S60704-12375510_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-036",
+    "set": "测验1",
+    "number": 36,
+    "type": "judge",
+    "question": "HBuilderX是uni-app推荐的开发工具。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "能力目标中要求能够熟练使用HBuilderX开发工具，因此HBuilderX是推荐的开发工具，该说法正确。",
+    "source": "S60704-12375700_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-037",
+    "set": "测验1",
+    "number": 37,
+    "type": "judge",
+    "question": "uni-app只能运行到小程序平台,不能运行到原生应用平台。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app支持多平台运行,包括小程序、安卓、iOS等原生应用平台。",
+    "source": "S60704-12375941_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-038",
+    "set": "测验1",
+    "number": 38,
+    "type": "judge",
+    "question": "uni-app项目中的pages目录用于存放静态资源。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "pages目录用于存放页面文件，静态资源存放在static目录中，因此该说法错误。",
+    "source": "S60704-12380130_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-039",
+    "set": "测验1",
+    "number": 39,
+    "type": "judge",
+    "question": "在uni-app中,可以直接使用HTML的<script>标签引入外部js文件。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app推荐使用ES6的import语句引入外部js文件,不推荐使用HTML的<script>标签引入方式。",
+    "source": "S60704-12380323_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz1-040",
+    "set": "测验1",
+    "number": 40,
+    "type": "judge",
+    "question": "tabBar配置属于globalStyle的一部分",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "tabBar是pages.json中的独立配置项，与globalStyle并列，不属于globalStyle的属性，因此该说法错误。",
+    "source": "S60704-12380518_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-001",
+    "set": "测验2",
+    "number": 1,
+    "type": "single",
+    "question": "在uni-app中，用于替代传统AJAX实现数据请求的API是以下哪一个？",
+    "options": [
+      {
+        "key": "A",
+        "text": "uni.get"
+      },
+      {
+        "key": "B",
+        "text": "uni.ajax"
+      },
+      {
+        "key": "C",
+        "text": "uni.request"
+      },
+      {
+        "key": "D",
+        "text": "uni.fetch"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "uni-app采用前后端分离的C/S架构，通过uni.request发起网络请求。",
+    "source": "S60704-13042390_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-002",
+    "set": "测验2",
+    "number": 2,
+    "type": "single",
+    "question": "在uni-app开发中，替代传统HTML文件的开发文件类型是以下哪一种？",
+    "options": [
+      {
+        "key": "A",
+        "text": ".html"
+      },
+      {
+        "key": "B",
+        "text": ".js"
+      },
+      {
+        "key": "C",
+        "text": ".css"
+      },
+      {
+        "key": "D",
+        "text": ".vue"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "uni-app采用Vue单文件组件规范，使用.vue文件替代传统HTML页面文件。",
+    "source": "S60704-13042718_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-003",
+    "set": "测验2",
+    "number": 3,
+    "type": "single",
+    "question": "在uni-app的.vue文件中，导入外部css文件应使用以下哪种方式?",
+    "options": [
+      {
+        "key": "A",
+        "text": "require(\"..\");"
+      },
+      {
+        "key": "B",
+        "text": "@import \"...\""
+      },
+      {
+        "key": "C",
+        "text": "<link href=\"...\" rel=\"stylesheet\">"
+      },
+      {
+        "key": "D",
+        "text": "import \"...\""
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app中在style标签内通过@import语句导入外部css文件。",
+    "source": "S60704-13042921_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-004",
+    "set": "测验2",
+    "number": 4,
+    "type": "single",
+    "question": "在uni-app的非H5端 （如App、小程序），无法使用以下哪个浏览器专用对象？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Array"
+      },
+      {
+        "key": "B",
+        "text": "Math"
+      },
+      {
+        "key": "C",
+        "text": "setTimeout"
+      },
+      {
+        "key": "D",
+        "text": "window"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "uni-app非H5端的JS运行在独立V8引擎中",
+    "source": "S60704-13043136_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-005",
+    "set": "测验2",
+    "number": 5,
+    "type": "single",
+    "question": "在uni-app中，全局样式应写在以下哪个文件中？",
+    "options": [
+      {
+        "key": "A",
+        "text": "main.js"
+      },
+      {
+        "key": "B",
+        "text": "pages.json."
+      },
+      {
+        "key": "C",
+        "text": "index.html"
+      },
+      {
+        "key": "D",
+        "text": "app.vue"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "uni-app的全局样式需写在根目录下的app.vue文件中，所有页面都会加载该文件中的样式。",
+    "source": "S60704-13043407_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-006",
+    "set": "测验2",
+    "number": 6,
+    "type": "single",
+    "question": "在uni-app中，用于实现轮播图功能的内置组件是以下哪一个？",
+    "options": [
+      {
+        "key": "A",
+        "text": "<slider>"
+      },
+      {
+        "key": "B",
+        "text": "<swiper>"
+      },
+      {
+        "key": "C",
+        "text": "<scroll-view>"
+      },
+      {
+        "key": "D",
+        "text": "<progress>"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app提供<swiper>内置组件，用于实现",
+    "source": "S60704-13043603_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-007",
+    "set": "测验2",
+    "number": 7,
+    "type": "single",
+    "question": "关于uni-app的easycom组件自动引入规则，以下说法正确的是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "只能在pages.json中配置注册"
+      },
+      {
+        "key": "B",
+        "text": "无需import和注册，直接在template中使用"
+      },
+      {
+        "key": "C",
+        "text": "需要手动import并注册组件"
+      },
+      {
+        "key": "D",
+        "text": "必须在main.js中全局注册"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app 2.7+支持easycom组件自动引入技",
+    "source": "S60704-13043795_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-008",
+    "set": "测验2",
+    "number": 8,
+    "type": "single",
+    "question": "在uni-app中，替代HTML中'div标签的组件是以下哪一个？",
+    "options": [
+      {
+        "key": "A",
+        "text": "<view>"
+      },
+      {
+        "key": "B",
+        "text": "<text>"
+      },
+      {
+        "key": "C",
+        "text": "<navigator>"
+      },
+      {
+        "key": "D",
+        "text": "<image>"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app参考小程序规范，将HTML中的'div",
+    "source": "S60704-13044004_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-009",
+    "set": "测验2",
+    "number": 9,
+    "type": "single",
+    "question": "（如video、 在uni-app中，若需覆盖原生组件 map）的层级，应使用以下哪个组件？",
+    "options": [
+      {
+        "key": "A",
+        "text": "<cover-view>"
+      },
+      {
+        "key": "B",
+        "text": "<mask>"
+      },
+      {
+        "key": "C",
+        "text": "<overlay>"
+      },
+      {
+        "key": "D",
+        "text": "<view>"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "（如video、mapuni-app中非H5端的原生组件",
+    "source": "S60704-13044214_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-010",
+    "set": "测验2",
+    "number": 10,
+    "type": "single",
+    "question": "在uni-app中，替代HTML中'img标签的组件是以下哪一个？",
+    "options": [
+      {
+        "key": "A",
+        "text": "<pic>"
+      },
+      {
+        "key": "B",
+        "text": "<picture>"
+      },
+      {
+        "key": "C",
+        "text": "<img>"
+      },
+      {
+        "key": "D",
+        "text": "<image>"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "uni-app将HTML中的'img标签映射为<imag",
+    "source": "S60704-13044414_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-011",
+    "set": "测验2",
+    "number": 11,
+    "type": "multiple",
+    "question": "在uni-app中，导入外部资源的正确方式有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "全局组件：在main.js中使用Vue.component注册"
+      },
+      {
+        "key": "B",
+        "text": "css文件： @import \"./common/uni.css\";"
+      },
+      {
+        "key": "C",
+        "text": "js模块：var util = require('./util.js');"
+      },
+      {
+        "key": "D",
+        "text": "Vue组件: import uniBadge from \"../components/uni-badge.vue\";"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app支持通过Vue.component注册全局组件，通过@import导入css，通过require导入js模块，通过import导入Vue组件。",
+    "source": "S60704-13044614_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-012",
+    "set": "测验2",
+    "number": 12,
+    "type": "multiple",
+    "question": "在uni-app中，以下HTML标签与内置组件的映射关系正确的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "iframe → web-view"
+      },
+      {
+        "key": "B",
+        "text": "select → picker"
+      },
+      {
+        "key": "C",
+        "text": "div → view"
+      },
+      {
+        "key": "D",
+        "text": "a → navigator."
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app参考小程序规范，对HTML标签进行",
+    "source": "S60704-13044819_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-013",
+    "set": "测验2",
+    "number": 13,
+    "type": "multiple",
+    "question": "在uni-app的非H5端 (如App、小程序），以下JS 特性不支持的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "document对象"
+      },
+      {
+        "key": "B",
+        "text": "cookie存储"
+      },
+      {
+        "key": "C",
+        "text": "setTimeout函数"
+      },
+      {
+        "key": "D",
+        "text": "window对象"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "uni-app非H5端的JS运行在独立V8引擎中",
+    "source": "S60704-13045021_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-014",
+    "set": "测验2",
+    "number": 14,
+    "type": "multiple",
+    "question": "以下关于uni-app与传统H5的区别，说法正确的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "uni-app支持跨多端，传统H5仅支持浏览器端"
+      },
+      {
+        "key": "B",
+        "text": "uni-app采用C/S架构，传统H5多为B/S架构"
+      },
+      {
+        "key": "C",
+        "text": "uni-app完全不支持HTML标签，必须使用内置组件"
+      },
+      {
+        "key": "D",
+        "text": "uni-app使用Vue数据绑定，传统H5依赖DOM操作"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "uni-app支持跨多端并采用C/S架构，使用Vue数据绑定；但并非完全不支持HTML标签。",
+    "source": "S60704-13045221_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-015",
+    "set": "测验2",
+    "number": 15,
+    "type": "multiple",
+    "question": "以下属于uni-app新增的手机端常用内置组件的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "<icon>"
+      },
+      {
+        "key": "B",
+        "text": "<scroll-view>"
+      },
+      {
+        "key": "C",
+        "text": "<progress>"
+      },
+      {
+        "key": "D",
+        "text": "<swiper>"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app针对手机端交互需求新增了一批内",
+    "source": "S60704-13045423_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-016",
+    "set": "测验2",
+    "number": 16,
+    "type": "judge",
+    "question": "uni-app中可以直接使用jQuery库进行DOM操作。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "jQuery依赖浏览器的document对象，而uni-app非H5端不支持document，因此无法直接使用jQuery；推荐使用Vue数据绑定替代DOM操作。",
+    "source": "S60704-13045617_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-017",
+    "set": "测验2",
+    "number": 17,
+    "type": "judge",
+    "question": "uni-app的easycom技术支持无需import和注册组件，直接在template中使用。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app 2.7+推出的easycom技术可自动扫描符合规范的组件，无需手动import和注册，直接在template中使用组件标签即可。",
+    "source": "S60704-13045820_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-018",
+    "set": "测验2",
+    "number": 18,
+    "type": "judge",
+    "question": "uni-app中'<input>组件仅支持输入框功能，单选、复选功能需使用专门的<radio>、 <checkbox>组件。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app遵循小程序规范，<input>组件仅作为输入框使用，单选、复选、时间选择等功能需使用对应的专用组件（如radio、checkbox、picker等)。",
+    "source": "S60704-13050035_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-019",
+    "set": "测验2",
+    "number": 19,
+    "type": "judge",
+    "question": "uni-app的.vue文件中，template节点可以包含多个根view组件。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app遵循Vue单文件组件规范，template节点必须包含且只能包含一个根view组件，所有内容需写在该根view内。",
+    "source": "S60704-13050236_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz2-020",
+    "set": "测验2",
+    "number": 20,
+    "type": "judge",
+    "question": "uni-app的全局样式必须写在pages.json文件中。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app的全局样式应写在根目录下的app.vue文件的style标签中，pages.json用于配置页面路由和窗口样式，不支持样式定义。",
+    "source": "S60704-13050435_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-001",
+    "set": "测验3",
+    "number": 1,
+    "type": "single",
+    "question": "uni-app工程中，用于配置应用名称、appid、 logo、版本等打包信息的文件是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "manifest.json"
+      },
+      {
+        "key": "B",
+        "text": "main.js"
+      },
+      {
+        "key": "C",
+        "text": "app.vue"
+      },
+      {
+        "key": "D",
+        "text": "pages.json"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "manifest.json文件用于配置应用名称、app",
+    "source": "S60704-13062124_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-002",
+    "set": "测验3",
+    "number": 2,
+    "type": "single",
+    "question": "uni-app工程中，存放各平台专用页面的目录是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "pages"
+      },
+      {
+        "key": "B",
+        "text": "uni_modulesdulesdules"
+      },
+      {
+        "key": "C",
+        "text": "platforms"
+      },
+      {
+        "key": "D",
+        "text": "components."
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "platforms目录存放各平台专用页面；pages存放业务页面；components存放组件；uni_modulesdules",
+    "source": "S60704-13062312_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-003",
+    "set": "测验3",
+    "number": 3,
+    "type": "single",
+    "question": "uni-app工程中，存放微信小程序、QQ小程序组件的目录是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "mycomponents"
+      },
+      {
+        "key": "B",
+        "text": "swancomponents"
+      },
+      {
+        "key": "C",
+        "text": "ttcomponents"
+      },
+      {
+        "key": "D",
+        "text": "wxcomponents"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "wxcomponents目录存放微信小程序、QQ小",
+    "source": "S60704-13062509_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-004",
+    "set": "测验3",
+    "number": 4,
+    "type": "single",
+    "question": "uni-app工程中，App原生语言插件应存放在哪个目录？",
+    "options": [
+      {
+        "key": "A",
+        "text": "nativeplugins"
+      },
+      {
+        "key": "B",
+        "text": "nativeResources"
+      },
+      {
+        "key": "C",
+        "text": "hybrid"
+      },
+      {
+        "key": "D",
+        "text": "platforms"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "nativeplugins目录存放App原生语言插件：",
+    "source": "S60704-13062713_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-005",
+    "set": "测验3",
+    "number": 5,
+    "type": "single",
+    "question": "在uni-app工程中，用于存放应用引用的本地静态资源（如图片、视频等）的目录是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "pages"
+      },
+      {
+        "key": "B",
+        "text": "components"
+      },
+      {
+        "key": "C",
+        "text": "static"
+      },
+      {
+        "key": "D",
+        "text": "uni_modulesdulesdules"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "根据uni-app目录结构规范，static目录用于",
+    "source": "S60704-13062909_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-006",
+    "set": "测验3",
+    "number": 6,
+    "type": "single",
+    "question": "uni-app工程中，存放uts文件的utssdk目录当前状态是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "仅支持微信小程序"
+      },
+      {
+        "key": "B",
+        "text": "正常使用"
+      },
+      {
+        "key": "C",
+        "text": "已废弃"
+      },
+      {
+        "key": "D",
+        "text": "仅支持App端"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "根据uni-app目录结构说明，utssdk目录当前已废弃。",
+    "source": "S60704-13063330_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-007",
+    "set": "测验3",
+    "number": 7,
+    "type": "single",
+    "question": "uni-app工程中，非工程代码 （如运行或发行的编译结果）应存放在哪个目录？",
+    "options": [
+      {
+        "key": "A",
+        "text": "pages"
+      },
+      {
+        "key": "B",
+        "text": "static"
+      },
+      {
+        "key": "C",
+        "text": "components"
+      },
+      {
+        "key": "D",
+        "text": "unpackage"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "unpackage目录存放非工程代码，一般存放",
+    "source": "S60704-13063532_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-008",
+    "set": "测验3",
+    "number": 8,
+    "type": "single",
+    "question": "uni-app工程中，用于配置页面路由、导航条、选项卡等页面类信息的文件是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "main.js"
+      },
+      {
+        "key": "B",
+        "text": "pages.json"
+      },
+      {
+        "key": "C",
+        "text": "manifest.json"
+      },
+      {
+        "key": "D",
+        "text": "app.vue"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "pages.json文件用于配置页面路由、导航条",
+    "source": "S60704-13063746_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-009",
+    "set": "测验3",
+    "number": 9,
+    "type": "single",
+    "question": "在uni-app工程中，业务页面文件存放的目录是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "hybrid"
+      },
+      {
+        "key": "B",
+        "text": "pages"
+      },
+      {
+        "key": "C",
+        "text": "static"
+      },
+      {
+        "key": "D",
+        "text": "components"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "pages目录是业务页面文件存放的目录，components存放组件，static存放静态资",
+    "source": "S60704-13063991_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-010",
+    "set": "测验3",
+    "number": 10,
+    "type": "single",
+    "question": "在uni-app工程中，符合vue组件规范的uni-app组件目录是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "components"
+      },
+      {
+        "key": "B",
+        "text": "uni_modulesdulesdules"
+      },
+      {
+        "key": "C",
+        "text": "static"
+      },
+      {
+        "key": "D",
+        "text": "pages"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "components目录存放符合vue组件规范的u",
+    "source": "S60704-13064387_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-011",
+    "set": "测验3",
+    "number": 11,
+    "type": "multiple",
+    "question": "关于static目录，以下说法正确的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "static目录和App原生资源目录 nativeResources有关系"
+      },
+      {
+        "key": "B",
+        "text": "static目录下的文件会被整体复制到最终编译包内"
+      },
+      {
+        "key": "C",
+        "text": "static目录支持特殊的平台子目录 （如web、 app、mp-weixin等)"
+      },
+      {
+        "key": "D",
+        "text": "css、less/scss等资源建议放在static目录下"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanation": "static目录下的文件会整体复制到最终编译包内，并支持web、app、mp-weixin等平台子目录；css、less/scss等资源不建议放在static目录下。",
+    "source": "S60704-13064583_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-012",
+    "set": "测验3",
+    "number": 12,
+    "type": "multiple",
+    "question": "以下目录中，用于存放各平台小程序组件的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "mycomponents"
+      },
+      {
+        "key": "B",
+        "text": "wxcomponents"
+      },
+      {
+        "key": "C",
+        "text": "components"
+      },
+      {
+        "key": "D",
+        "text": "swancomponents"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Wwxcomponents存放微信小程序、QQ小程序组件，mycomponents存放支付宝小程序组件",
+    "source": "S60704-13064790_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-013",
+    "set": "测验3",
+    "number": 13,
+    "type": "multiple",
+    "question": "关于unicloud目录，以下说法正确的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "支付宝小程序云为uniCloud-alipay"
+      },
+      {
+        "key": "B",
+        "text": "unicloud目录是存放uts文件的目录"
+      },
+      {
+        "key": "C",
+        "text": "腾讯云为unicloud-tcb"
+      },
+      {
+        "key": "D",
+        "text": "阿里云为unicloud-aliyun"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "uniCloud目录是云空间目录；支付宝小程序云为uniCloud-alipay，阿里云为uniCloud-aliyun，腾讯云为uniCloud-tcb。",
+    "source": "S60704-13064995_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-014",
+    "set": "测验3",
+    "number": 14,
+    "type": "multiple",
+    "question": "以下属于uni-app工程默认目录的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "common"
+      },
+      {
+        "key": "B",
+        "text": "static"
+      },
+      {
+        "key": "C",
+        "text": "components"
+      },
+      {
+        "key": "D",
+        "text": "pages"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app工程默认包含components、pagesstatic等目录，common目录是用户自建的",
+    "source": "S60704-13065185_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-015",
+    "set": "测验3",
+    "number": 15,
+    "type": "multiple",
+    "question": "以下文件中，属于uni-app工程根目录下默认文件的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "main.js"
+      },
+      {
+        "key": "B",
+        "text": "pages.json"
+      },
+      {
+        "key": "C",
+        "text": "app.vue"
+      },
+      {
+        "key": "D",
+        "text": "ext.json"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "uni-app工程根目录下默认包含main.js、",
+    "source": "S60704-13065387_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-016",
+    "set": "测验3",
+    "number": 16,
+    "type": "judge",
+    "question": "非static目录下的文件（vue组件、is、css等）只有被引用时，才会被打包编译。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "根据static目录的说明，非static目录下的文件(vue组件、is、css等）只有被引用时，才会被打包编译。",
+    "source": "S60704-13065590_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-017",
+    "set": "测验3",
+    "number": 17,
+    "type": "judge",
+    "question": "pages.json文件用于配置应用名称、appid、 logo、版本等打包信息。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "pages.json文件用于配置页面路由、导航条、选项卡等页面类信息；配置应用名称、appid、logo、版本等打包信息的是manifest.json文件。",
+    "source": "S60704-13065784_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-018",
+    "set": "测验3",
+    "number": 18,
+    "type": "judge",
+    "question": "static目录下的文件在App第一次启动时会解压到 App的外部存储目录（uni-app x从3.99+不再解压)。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "根据static目录的说明，static目录下的文件在App第一次启动时会解压到App的外部存储目录uni-appx从3.99+不再解压）。",
+    "source": "S60704-13065991_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-019",
+    "set": "测验3",
+    "number": 19,
+    "type": "judge",
+    "question": "uni-app工程就是一个Vue项目。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "根据工程简介，一个uni-app工程就是一个Vue项目。",
+    "source": "S60704-13070188_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "quiz3-020",
+    "set": "测验3",
+    "number": 20,
+    "type": "judge",
+    "question": "utssdk目录目前仍在正常使用。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "根据目录结构说明，utssdk目录存放uts文件（已废弃）。",
+    "source": "S60704-13070405_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-001",
+    "set": "测试4",
+    "number": 1,
+    "type": "single",
+    "question": "uni-app中应用生命周期函数onLaunch的正确描述是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "全局只触发一次"
+      },
+      {
+        "key": "B",
+        "text": "参数为当前页面路径"
+      },
+      {
+        "key": "C",
+        "text": "在页面组件中监听有效"
+      },
+      {
+        "key": "D",
+        "text": "当应用从前台进入后台时触发"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "onLaunch在uni-app初始化完成时触发，全局只触发一次。",
+    "source": "S60704-13120879_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-002",
+    "set": "测试4",
+    "number": 2,
+    "type": "single",
+    "question": "以下不属于app.vue文件作用的是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "监听应用生命周期"
+      },
+      {
+        "key": "B",
+        "text": "配置全局存储globalData"
+      },
+      {
+        "key": "C",
+        "text": "配置全局样式"
+      },
+      {
+        "key": "D",
+        "text": "编写页面视图元素"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "其作app.vue本身不是页面，不能编写视图元素用包括监听应用生命周期、配置全局样式、",
+    "source": "S60704-13121090_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-003",
+    "set": "测试4",
+    "number": 3,
+    "type": "single",
+    "question": "以下关于uni-app中app.vue/uvue的描述，错误的是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "uni-app js引擎版对应app.vue"
+      },
+      {
+        "key": "B",
+        "text": "可以编写<template>视图元素"
+      },
+      {
+        "key": "C",
+        "text": "uni-app x对应App.uvue"
+      },
+      {
+        "key": "D",
+        "text": "是应用入口文件，所有页面在其下切换"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "app.vue/App.uvue本身不是页面，不能编写template视图元素。",
+    "source": "S60704-13121289_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-004",
+    "set": "测试4",
+    "number": 4,
+    "type": "single",
+    "question": "在app.vue的onLaunch生命周期中获取 globalData的正确方式是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "app.globalData"
+      },
+      {
+        "key": "B",
+        "text": "getApp().globalData"
+      },
+      {
+        "key": "C",
+        "text": "uni.getGlobalData()"
+      },
+      {
+        "key": "D",
+        "text": "this.globalData"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "应用onLaunch时，getApp对象还未获取，应使用this.globalData访问globalData。",
+    "source": "S60704-13121492_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-005",
+    "set": "测试4",
+    "number": 5,
+    "type": "single",
+    "question": "在uni-app中，以下关于app.vue的描述错误的是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "app.vue可配置全局样式和globalData"
+      },
+      {
+        "key": "B",
+        "text": "app.vue可监听应用生命周期，如onLaunch、 onShow"
+      },
+      {
+        "key": "C",
+        "text": "app.vue是应用的入口文件，所有页面在其下切换"
+      },
+      {
+        "key": "D",
+        "text": "app.vue本身是页面，可以编写视图元素 （包含<template>）"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "app.vue本身不是页面，不能编写视图元素；它可配置全局样式和globalData，并监听应用生命周期。",
+    "source": "S60704-13121690_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-006",
+    "set": "测试4",
+    "number": 6,
+    "type": "single",
+    "question": "在应用onLaunch时操作globalData，正确的方式是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "this.globalData.text = 'test'"
+      },
+      {
+        "key": "B",
+        "text": "uni.setGlobalData({ text: 'test' })"
+      },
+      {
+        "key": "C",
+        "text": "getApp().globalData.text = 'test'"
+      },
+      {
+        "key": "D",
+        "text": "app.globalData.text = 'test'"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "在应用onLaunch时，getApp对象还未获取，应使用this.globalData操作globalData。",
+    "source": "S60704-13121894_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-007",
+    "set": "测试4",
+    "number": 7,
+    "type": "single",
+    "question": "以下哪个应用生命周期函数在app-uvue平台不支持？",
+    "options": [
+      {
+        "key": "A",
+        "text": "onShow"
+      },
+      {
+        "key": "B",
+        "text": "onError"
+      },
+      {
+        "key": "C",
+        "text": "onHide"
+      },
+      {
+        "key": "D",
+        "text": "onLaunch"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "onError生命周期函数在app-uvue平台不支持。",
+    "source": "S60704-13122093_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-008",
+    "set": "测试4",
+    "number": 8,
+    "type": "single",
+    "question": "当用户点击手机Home键将uni-app应用切换到后台时，会触发哪个生命周期函数？",
+    "options": [
+      {
+        "key": "A",
+        "text": "onLaunch"
+      },
+      {
+        "key": "B",
+        "text": "onError"
+      },
+      {
+        "key": "C",
+        "text": "onHide"
+      },
+      {
+        "key": "D",
+        "text": "onShow"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "onHide在应用从前台进入后台时触发，ons",
+    "source": "S60704-13122295_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-009",
+    "set": "测试4",
+    "number": 9,
+    "type": "single",
+    "question": "在同时包含vue和nvue文件的uni-app工程中，为避免nvue不支持的CSS报错，正确的做法是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将nvue不支持的CSS写在单独的CSS文件中"
+      },
+      {
+        "key": "B",
+        "text": "使用条件编译排除nvue的css"
+      },
+      {
+        "key": "C",
+        "text": "将所有CSS写在app.vue的<style>中"
+      },
+      {
+        "key": "D",
+        "text": "忽略控制台报错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "可使用条件编译/*#ifndef APP-PLUS-NVU",
+    "source": "S60704-13122488_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-010",
+    "set": "测试4",
+    "number": 10,
+    "type": "single",
+    "question": "若需将globalData的数据绑定到页面上，建议在页面的哪人生命周期中进行变量重赋值？",
+    "options": [
+      {
+        "key": "A",
+        "text": "onUnload"
+      },
+      {
+        "key": "B",
+        "text": "onLoad"
+      },
+      {
+        "key": "C",
+        "text": "onShow"
+      },
+      {
+        "key": "D",
+        "text": "onReady"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "将globalData的数据绑定到页面上，可在页",
+    "source": "S60704-13122683_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-011",
+    "set": "测试4",
+    "number": 11,
+    "type": "single",
+    "question": "以下哪种场景会触发onPageNotFound生命周期函数？",
+    "options": [
+      {
+        "key": "A",
+        "text": "应用初始化时"
+      },
+      {
+        "key": "B",
+        "text": "通过uni.navigateTo跳转不存在的页面"
+      },
+      {
+        "key": "C",
+        "text": "页面从后台切换到前台时"
+      },
+      {
+        "key": "D",
+        "text": "通过分享卡片打开不存在的页面"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "onPageNotFound在页面实际上已经打开",
+    "source": "S60704-13122876_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-012",
+    "set": "测试4",
+    "number": 12,
+    "type": "multiple",
+    "question": "uni-app中app.vue文件的作用包括以下哪些?",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置全局存储globalData"
+      },
+      {
+        "key": "B",
+        "text": "配置全局样式"
+      },
+      {
+        "key": "C",
+        "text": "监听应用生命周期"
+      },
+      {
+        "key": "D",
+        "text": "编写页面视图内容"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "app.vue是应用入口文件，作用包括监听应用生命周期、配置全局样式、配置globalData，但不能编写页面视图内容。",
+    "source": "S60704-13123069_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-013",
+    "set": "测试4",
+    "number": 13,
+    "type": "multiple",
+    "question": "关于uni-app中globalData的描述，正确的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "是一种简单的全局变量机制"
+      },
+      {
+        "key": "B",
+        "text": "全端通用"
+      },
+      {
+        "key": "C",
+        "text": "在app.vue中定义"
+      },
+      {
+        "key": "D",
+        "text": "必须使用vuex进行状态管理"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "globalData是简单的全局变量机制，可在app.vue中定义并全端通用，不必须使用vuex。",
+    "source": "S60704-13123262_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-014",
+    "set": "测试4",
+    "number": 14,
+    "type": "multiple",
+    "question": "在app.vue中配置全局样式时，若工程同时包含 vue和nvue文件，正确的做法有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "忽略控制台关于nvue不支持CSS的报警"
+      },
+      {
+        "key": "B",
+        "text": "使用条件编译排除nvue不支持的csS"
+      },
+      {
+        "key": "C",
+        "text": "将nvue不支持的CSS写在单独的条件编译块中"
+      },
+      {
+        "key": "D",
+        "text": "将所有CSS直接写在<style>标签中"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanation": "当工程同时有vue和nvue文件时，全局样式",
+    "source": "S60704-13123459_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-015",
+    "set": "测试4",
+    "number": 15,
+    "type": "multiple",
+    "question": "以下关于uni-app应用生命周期监听的描述，正确的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在页面组件中监听无效"
+      },
+      {
+        "key": "B",
+        "text": "onLaunch全局只触发一次"
+      },
+      {
+        "key": "C",
+        "text": "onShow在应用从后台进入前台时触发"
+      },
+      {
+        "key": "D",
+        "text": "仅可在app.vue中监听"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "应用生命周期仅可在app.vue中监听，页面",
+    "source": "S60704-13123649_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-016",
+    "set": "测试4",
+    "number": 16,
+    "type": "multiple",
+    "question": "uni-app支持的应用生命周期函数有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "onLaunch"
+      },
+      {
+        "key": "B",
+        "text": "onPageScroll"
+      },
+      {
+        "key": "C",
+        "text": "onHide"
+      },
+      {
+        "key": "D",
+        "text": "onShow"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app支持的应用生命周期函数包括onLaunch、onShow、onHide、onError等",
+    "source": "S60704-13123841_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-017",
+    "set": "测试4",
+    "number": 17,
+    "type": "multiple",
+    "question": "关于uni-app中app.vue和App.uvue的描述，正确的有哪些？",
+    "options": [
+      {
+        "key": "A",
+        "text": "uni-app x对应App.uvue"
+      },
+      {
+        "key": "B",
+        "text": "app.vue/uvue本身是页面组件"
+      },
+      {
+        "key": "C",
+        "text": "uni-app js引擎版对应app.vue"
+      },
+      {
+        "key": "D",
+        "text": "app.vue/uvue是应用入口文件"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app js引擎版对应app.vue，uni-app x对应App.uvue；app.vue/App.uvue是应用入口文件，但本身不是页面组件。",
+    "source": "S60704-13125217_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-018",
+    "set": "测试4",
+    "number": 18,
+    "type": "judge",
+    "question": "uni-app中app.vue可以编写<template>视图元素。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "app.vue本身不是页面，不能编写视图元素，没有<template>标签",
+    "source": "S60704-13125412_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-019",
+    "set": "测试4",
+    "number": 19,
+    "type": "judge",
+    "question": "uni-app中onLaunch生命周期函数在应用初始化完成时触发，全局只触发一次。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "onLaunch是应用初始化完成时触发的生命周期函数，全局仅触发一次",
+    "source": "S60704-13125607_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test4-020",
+    "set": "测试4",
+    "number": 20,
+    "type": "judge",
+    "question": "uni-app中应用生命周期函数可以在页面组件中监听。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "应用生命周期仅可在app.vue中监听，在页面监听无效",
+    "source": "S60704-13125812_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-001",
+    "set": "测试5",
+    "number": 1,
+    "type": "single",
+    "question": "tabBar配置中，用于设置未选中时文字颜色的属性是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "borderStyle"
+      },
+      {
+        "key": "B",
+        "text": "backgroundColor"
+      },
+      {
+        "key": "C",
+        "text": "color"
+      },
+      {
+        "key": "D",
+        "text": "selectedColor"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "color属性用于设置tabBar未选中时的文字颜色。",
+    "source": "S60704-13142854_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-002",
+    "set": "测试5",
+    "number": 2,
+    "type": "single",
+    "question": "pages.json中哪个配置项是必填的，用于设置页面路径及窗口表现？",
+    "options": [
+      {
+        "key": "A",
+        "text": "globalStyle"
+      },
+      {
+        "key": "B",
+        "text": "easycom"
+      },
+      {
+        "key": "C",
+        "text": "pages"
+      },
+      {
+        "key": "D",
+        "text": "tabBar"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "pages是pages.json的必填配置项，用于设",
+    "source": "S60704-13143054_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-003",
+    "set": "测试5",
+    "number": 3,
+    "type": "single",
+    "question": "preloadRule分包预下载规则支持以下哪个平台？",
+    "options": [
+      {
+        "key": "A",
+        "text": "学节跳动小程序"
+      },
+      {
+        "key": "B",
+        "text": "H5"
+      },
+      {
+        "key": "C",
+        "text": "微信小程序"
+      },
+      {
+        "key": "D",
+        "text": "百度小程序"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "preloadRule的平台兼容包括微信小程序、QQ小程序、抖音小程序等，H5和百度小程序不",
+    "source": "S60704-13143245_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-004",
+    "set": "测试5",
+    "number": 4,
+    "type": "single",
+    "question": "uni-app中，定位权限申请应在哪个文件中配置？",
+    "options": [
+      {
+        "key": "A",
+        "text": "main.js"
+      },
+      {
+        "key": "B",
+        "text": "app.vue"
+      },
+      {
+        "key": "C",
+        "text": "pages.json"
+      },
+      {
+        "key": "D",
+        "text": "manifest.json"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "题目中提到，定位权限申请等原属于微信小程序app.json的内容，在uni-app中需在manifes",
+    "source": "S60704-13143439_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-005",
+    "set": "测试5",
+    "number": 5,
+    "type": "single",
+    "question": "uni-app中tabBar的高度 (不含安全区) 默认是多少？",
+    "options": [
+      {
+        "key": "A",
+        "text": "50px"
+      },
+      {
+        "key": "B",
+        "text": "44px"
+      },
+      {
+        "key": "C",
+        "text": "60px"
+      },
+      {
+        "key": "D",
+        "text": "48px"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "(不含安根据题目内容，tabBar高度为50px",
+    "source": "S60704-13143642_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-006",
+    "set": "测试5",
+    "number": 6,
+    "type": "single",
+    "question": "以下哪个平台不支持pages.json中的 subPackaqes分包加载配置？",
+    "options": [
+      {
+        "key": "A",
+        "text": "支付宝小程序"
+      },
+      {
+        "key": "B",
+        "text": "H5"
+      },
+      {
+        "key": "C",
+        "text": "微信小程序"
+      },
+      {
+        "key": "D",
+        "text": "APP"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "subPackages分包加载配置的平台兼容说日",
+    "source": "S60704-13143841_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-007",
+    "set": "测试5",
+    "number": 7,
+    "type": "single",
+    "question": "easycom配置项的作用是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置tabBar"
+      },
+      {
+        "key": "B",
+        "text": "组件自动引入规则"
+      },
+      {
+        "key": "C",
+        "text": "设置全局样式"
+      },
+      {
+        "key": "D",
+        "text": "设置页面路径"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "®easycom配置项用于设置组件自动引入规则支持自定义扫描规则，如自动引入指定格式，",
+    "source": "S60704-13144029_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-008",
+    "set": "测试5",
+    "number": 8,
+    "type": "single",
+    "question": "在uni-app中，决定页面文件路径、窗口样式等全局配置的文件是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "app.json"
+      },
+      {
+        "key": "B",
+        "text": "manifest.json"
+      },
+      {
+        "key": "C",
+        "text": "main.js"
+      },
+      {
+        "key": "D",
+        "text": "pages.json"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "uni-app使用pages.json进行全局配置，类1",
+    "source": "S60704-13144218_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-009",
+    "set": "测试5",
+    "number": 9,
+    "type": "single",
+    "question": "globalStyle配置项中，用于设置导航栏标题文字的属性是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "navigationBarTitleText"
+      },
+      {
+        "key": "B",
+        "text": "backgroundColor"
+      },
+      {
+        "key": "C",
+        "text": "navigationBarBackgroundColor"
+      },
+      {
+        "key": "D",
+        "text": "navigationBarTextStyle"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "navigationBarTitleText用于设置导航栏标是",
+    "source": "S60704-13144398_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-010",
+    "set": "测试5",
+    "number": 10,
+    "type": "single",
+    "question": "pages.json中的condition配置项作用是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "设置全局窗口样式"
+      },
+      {
+        "key": "B",
+        "text": "设置底部tab表现 (仅开发期间生效)"
+      },
+      {
+        "key": "C",
+        "text": "启动模式配置"
+      },
+      {
+        "key": "D",
+        "text": "分包预下载规则"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "condition配置项用于启动模式配置，仅在开发期间生效，可指定启动页面等。",
+    "source": "S60704-13144589_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-011",
+    "set": "测试5",
+    "number": 11,
+    "type": "multiple",
+    "question": "easycom配置项支持的功能有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置分包加载"
+      },
+      {
+        "key": "B",
+        "text": "自动扫描组件"
+      },
+      {
+        "key": "C",
+        "text": "设置tabBar样式"
+      },
+      {
+        "key": "D",
+        "text": "自定义组件引入规则"
+      }
+    ],
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanation": "easycom配置项支持自动扫描组件（autoscan）和自定义组件引入规则（custom），与tabb",
+    "source": "S60704-13144777_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-012",
+    "set": "测试5",
+    "number": 12,
+    "type": "multiple",
+    "question": "condition配置项的作用包括？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置模式名称"
+      },
+      {
+        "key": "B",
+        "text": "设置全局样式"
+      },
+      {
+        "key": "C",
+        "text": "设置启动页面"
+      },
+      {
+        "key": "D",
+        "text": "仅开发期间生效"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "condition配置项用于启动模式配置，可设置启动页面（path）、模式名称（name），且仅在",
+    "source": "S60704-13144964_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-013",
+    "set": "测试5",
+    "number": 13,
+    "type": "multiple",
+    "question": "以下属于pages.json配置项的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "tabBar"
+      },
+      {
+        "key": "B",
+        "text": "manifest"
+      },
+      {
+        "key": "C",
+        "text": "pages"
+      },
+      {
+        "key": "D",
+        "text": "subPackages"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "pages、tabBar、subPackages均为pages.json的配置项，manifest是独立的配置文件，用",
+    "source": "S60704-13145156_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-014",
+    "set": "测试5",
+    "number": 14,
+    "type": "multiple",
+    "question": "globalStyle配置项可设置的内容包括？",
+    "options": [
+      {
+        "key": "A",
+        "text": "导航栏标题文字"
+      },
+      {
+        "key": "B",
+        "text": "tabBar高度"
+      },
+      {
+        "key": "C",
+        "text": "页面方向"
+      },
+      {
+        "key": "D",
+        "text": "窗口背景色"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "globalStyle可设置导航栏标题文字(navigationBarTitleText）、窗口背景色",
+    "source": "S60704-13145353_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-015",
+    "set": "测试5",
+    "number": 15,
+    "type": "multiple",
+    "question": "tabBar配置中的list数组每个元素包含些属性?",
+    "options": [
+      {
+        "key": "A",
+        "text": "text"
+      },
+      {
+        "key": "B",
+        "text": "iconPath"
+      },
+      {
+        "key": "C",
+        "text": "selectedIconPath"
+      },
+      {
+        "key": "D",
+        "text": "pagePath"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "tabBar的list数组元素需包含pagePath、text、iconPath、selectedIconPath等属性。",
+    "source": "S60704-13145542_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-016",
+    "set": "测试5",
+    "number": 16,
+    "type": "judge",
+    "question": "preloadRule分包预下载规则支持所有平台。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "preloadRule仅支持微信小程序、QQ小程序等部分平台，并非所有平台。",
+    "source": "S60704-13145728_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-017",
+    "set": "测试5",
+    "number": 17,
+    "type": "judge",
+    "question": "uni-app中tabBar高度为50px。 （不含安全区）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "题目中明确说明tabBar高度为50px（不含安全区）。",
+    "source": "S60704-13145914_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-018",
+    "set": "测试5",
+    "number": 18,
+    "type": "judge",
+    "question": "(不含状态栏）为44px。 uni-app中导航栏高度",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "题目中明确说明导航栏高度为44px（不含状态栏)。",
+    "source": "S60704-13150101_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-019",
+    "set": "测试5",
+    "number": 19,
+    "type": "judge",
+    "question": "uni-app中定位权限申请需在pages.json中配置",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "题目中提到，定位权限申请等内容在uni-app中需在manifest中配置，而非pages.json。",
+    "source": "S60704-13150303_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test5-020",
+    "set": "测试5",
+    "number": 20,
+    "type": "judge",
+    "question": "H5平台支持pages.json中的subPackages分包加载配置。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "subPackages配置项的平台兼容说明中明确H5不支持。",
+    "source": "S60704-13150493_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-001",
+    "set": "测试6",
+    "number": 1,
+    "type": "single",
+    "question": "uni-app的核心优势是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "仅支持H5端开发"
+      },
+      {
+        "key": "B",
+        "text": "仅支持原生App开发"
+      },
+      {
+        "key": "C",
+        "text": "仅支持微信小程序开发"
+      },
+      {
+        "key": "D",
+        "text": "跨多端开发"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "uni-app的核心优势是可以跨多端开发，包括H5小程序、App等。",
+    "source": "S60704-13155841_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-002",
+    "set": "测试6",
+    "number": 2,
+    "type": "single",
+    "question": "uni-app中app.vue的作用不包括？",
+    "options": [
+      {
+        "key": "A",
+        "text": "编写视图元素"
+      },
+      {
+        "key": "B",
+        "text": "配置全局样式"
+      },
+      {
+        "key": "C",
+        "text": "配置全局存储globalData"
+      },
+      {
+        "key": "D",
+        "text": "监听应用生命周期"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "app.vue本身不是页面，不能编写视图元素，主要作用是监听应用生命周期、配置全局样式等。",
+    "source": "S60704-13160040_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-003",
+    "set": "测试6",
+    "number": 3,
+    "type": "single",
+    "question": "以下哪个生命周期函数会在uni-app初始化完成时触发且全局只触发一次？",
+    "options": [
+      {
+        "key": "A",
+        "text": "onLaunch"
+      },
+      {
+        "key": "B",
+        "text": "onShow"
+      },
+      {
+        "key": "C",
+        "text": "onError"
+      },
+      {
+        "key": "D",
+        "text": "onHide"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "onLaunch生命周期函数在uni-app初始化完",
+    "source": "S60704-13160228_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-004",
+    "set": "测试6",
+    "number": 4,
+    "type": "single",
+    "question": "uni-app的.vue文件中，用于编写标签组件的部分是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "script"
+      },
+      {
+        "key": "B",
+        "text": "template"
+      },
+      {
+        "key": "C",
+        "text": "style"
+      },
+      {
+        "key": "D",
+        "text": "以上都不是"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app的.vue文件中，template是一级节点，用于编写标签组件。",
+    "source": "S60704-13160421_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-005",
+    "set": "测试6",
+    "number": 5,
+    "type": "single",
+    "question": "以下哪个是官方推荐的uni-app开发工具?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sublime Text"
+      },
+      {
+        "key": "B",
+        "text": "WebStorm"
+      },
+      {
+        "key": "C",
+        "text": "HBuilderX"
+      },
+      {
+        "key": "D",
+        "text": "VS Code"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "HBuilderX是官方推荐的uni-app开发工具，可通过它快速创建uni-app工程",
+    "source": "S60704-13160609_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-006",
+    "set": "测试6",
+    "number": 6,
+    "type": "single",
+    "question": "uni-app中用于设置页面路径及窗口表现的配置项是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "tabBar"
+      },
+      {
+        "key": "B",
+        "text": "globalStyle"
+      },
+      {
+        "key": "C",
+        "text": "condition"
+      },
+      {
+        "key": "D",
+        "text": "pages"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "pages配置项用于设置页面路径及窗口表现",
+    "source": "S60704-13160801_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-007",
+    "set": "测试6",
+    "number": 7,
+    "type": "single",
+    "question": "uni-app中用于发送网络请求的APl是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "axiOS"
+      },
+      {
+        "key": "B",
+        "text": "uni.request"
+      },
+      {
+        "key": "C",
+        "text": "ajax"
+      },
+      {
+        "key": "D",
+        "text": "fetch"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app中使用uni.request APl发送网络请求类似传统H5中的ajax。",
+    "source": "S60704-13160986_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-008",
+    "set": "测试6",
+    "number": 8,
+    "type": "single",
+    "question": "uni-app工程中存放业务页面文件的目录是?",
+    "options": [
+      {
+        "key": "A",
+        "text": "pages"
+      },
+      {
+        "key": "B",
+        "text": "static"
+      },
+      {
+        "key": "C",
+        "text": "components"
+      },
+      {
+        "key": "D",
+        "text": "uniCloud"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app工程中pages目录用于存放业务页面文件，components存放组件，static存放静中众",
+    "source": "S60704-13161181_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-009",
+    "set": "测试6",
+    "number": 9,
+    "type": "single",
+    "question": "uni-app开发中使用的单文件组件格式是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "js"
+      },
+      {
+        "key": "B",
+        "text": ".css"
+      },
+      {
+        "key": "C",
+        "text": ".vue"
+      },
+      {
+        "key": "D",
+        "text": ".html"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "uni-app开发使用.vue文件作为单文件组件格式开发完成后会编译为js文件运行",
+    "source": "S60704-13161369_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-010",
+    "set": "测试6",
+    "number": 10,
+    "type": "single",
+    "question": "uni-app中存放可复用组件的目录是？",
+    "options": [
+      {
+        "key": "A",
+        "text": "pages"
+      },
+      {
+        "key": "B",
+        "text": "static"
+      },
+      {
+        "key": "C",
+        "text": "uniCloud"
+      },
+      {
+        "key": "D",
+        "text": "components"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "®components目录用于存放符合vue组件规范的uni-app可复用组件。",
+    "source": "S60704-13161560_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-011",
+    "set": "测试6",
+    "number": 11,
+    "type": "multiple",
+    "question": "以下属于uni-app应用生命周期函数的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "onHide"
+      },
+      {
+        "key": "B",
+        "text": "onError"
+      },
+      {
+        "key": "C",
+        "text": "onshow"
+      },
+      {
+        "key": "D",
+        "text": "onLaunch"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app支持的应用生命周期函数包括onLaunch、onShow、onHide、onError等",
+    "source": "S60704-13161746_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-012",
+    "set": "测试6",
+    "number": 12,
+    "type": "multiple",
+    "question": "pages.json中的配置项包括？",
+    "options": [
+      {
+        "key": "A",
+        "text": "condition"
+      },
+      {
+        "key": "B",
+        "text": "pages"
+      },
+      {
+        "key": "C",
+        "text": "tabBar"
+      },
+      {
+        "key": "D",
+        "text": "globalStyle"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "pages.json的配置项包括globalStyle、pagestabBar、condition等。",
+    "source": "S60704-13161944_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-013",
+    "set": "测试6",
+    "number": 13,
+    "type": "multiple",
+    "question": "以下属于uni-app工程默认目录的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "static"
+      },
+      {
+        "key": "B",
+        "text": "pages"
+      },
+      {
+        "key": "C",
+        "text": "components"
+      },
+      {
+        "key": "D",
+        "text": "mycomponents"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app工程默认包含components、pagesstatic、mycomponents等目录。",
+    "source": "S60704-13162144_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-014",
+    "set": "测试6",
+    "number": 14,
+    "type": "multiple",
+    "question": "uni-app与传统H5相比，主要变化有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "开发工具变化"
+      },
+      {
+        "key": "B",
+        "text": "网络模型从B/S变为C/S"
+      },
+      {
+        "key": "C",
+        "text": "文件类型从.html变为.vue"
+      },
+      {
+        "key": "D",
+        "text": "文件内代码架构变化"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "uni-app与传统H5相比，网络模型、文件类型、代码架构、开发工具等都有变化。",
+    "source": "S60704-13162348_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-015",
+    "set": "测试6",
+    "number": 15,
+    "type": "multiple",
+    "question": "关于HBuilderX的说法正确的有？",
+    "options": [
+      {
+        "key": "A",
+        "text": "是轻如编辑器、强如IDE的合体版本"
+      },
+      {
+        "key": "B",
+        "text": "是免费的国产开发工具"
+      },
+      {
+        "key": "C",
+        "text": "支持插件安装"
+      },
+      {
+        "key": "D",
+        "text": "可通过官网下载"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "HBuilderX是轻如编辑器、强如IDE的合体版本免费国产开发工具，可通过官网下载，支持",
+    "source": "S60704-13162540_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-016",
+    "set": "测试6",
+    "number": 16,
+    "type": "judge",
+    "question": "app.vue可以编写视图元素",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "®app.vue本身不是页面，不能编写视图元素",
+    "source": "S60704-13162730_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-017",
+    "set": "测试6",
+    "number": 17,
+    "type": "judge",
+    "question": "uni-app中发送网络请求使用的是uni.request APl。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app中使用uni.request APi发送网络请求，类似传统H5的ajax。",
+    "source": "S60704-13162915_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-018",
+    "set": "测试6",
+    "number": 18,
+    "type": "judge",
+    "question": "uni-app工程本质上是一个Vue项目。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "uni-app工程本质上是一个Vue项目，可以通过HBuilderX或cli方式创l建。",
+    "source": "S60704-13163114_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-019",
+    "set": "测试6",
+    "number": 19,
+    "type": "judge",
+    "question": "static目录用于存放应用引用的本地静态资源。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "static目录是uni-app中存放应用引l用的本地静态资源（如图片、视频等）的目录",
+    "source": "S60704-13163315_com.chaoxing.mobile.png"
+  },
+  {
+    "id": "test6-020",
+    "set": "测试6",
+    "number": 20,
+    "type": "judge",
+    "question": "uni-app只能开发微信小程序。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "uni-app可以跨多端开发，包括H5、微信小程序、支付宝小程序、App等多个平台。",
+    "source": "S60704-13163517_com.chaoxing.mobile.png"
+  }
+];

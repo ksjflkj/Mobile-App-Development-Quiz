@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>移动应用开发题库</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- 同步顺序加载，彻底免除 file:// 协议下的跨域报错 -->
+    <script src="./data/questions-db.js"></script>
+    <script src="./src/quiz-core.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <!-- 头部：标题与主题切换 -->
+    <header class="app-header">
+      <div class="header-logo">
+        <h1>移动应用开发题库</h1>
+        <p id="appSummary">加载中...</p>
+      </div>
+      <button id="themeToggleButton" class="theme-toggle-btn" type="button" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </header>
+
+    <!-- 首页仪表盘容器 -->
+    <div id="dashboardView" class="view-container">
+      <!-- 统计面板 -->
+      <section class="stats-row">
+        <div class="stats-card total-stats">
+          <h3>题库总览</h3>
+          <p id="statsTotalCount">-- 题</p>
+          <span class="stats-desc">包含单选、多选与判断题</span>
+        </div>
+        <div id="wrongCardButton" class="stats-card wrong-stats clickable">
+          <h3>错题本</h3>
+          <p id="statsWrongCount">0 题</p>
+          <span class="stats-desc">答错的题会自动记录在此</span>
+        </div>
+        <div class="stats-card record-stats">
+          <h3>备考状态</h3>
+          <p id="statsExamRecord">未开始</p>
+          <span class="stats-desc">最近一次测验记录</span>
+        </div>
+      </section>
+
+      <!-- 快捷操作区 -->
+      <section class="quick-actions-section">
+        <h2>测验与抽题</h2>
+        <div class="action-buttons-group">
+          <button id="quickRandomBtn" class="action-btn random-btn" type="button">
+            <span class="btn-icon">🎲</span> 随机抽题
+          </button>
+          <button id="quickExamBtn" class="action-btn exam-btn" type="button">
+            <span class="btn-icon">⏱️</span> 限时测验
+          </button>
+        </div>
+      </section>
+
+      <!-- 题库单元列表 -->
+      <section class="sets-section">
+        <h2>分套单元测试</h2>
+        <div id="unitGrid" class="unit-grid"></div>
+      </section>
+    </div>
+
+    <!-- 答题/测验工作区容器 -->
+    <div id="quizView" class="view-container" hidden>
+      <div class="app-layout">
+        <!-- 侧边栏/答题卡区 -->
+        <aside class="sidebar">
+          <button id="backToHomeBtn" class="back-home-btn" type="button">
+            ← 返回首页
+          </button>
+          
+          <!-- 考试倒计时 -->
+          <div id="examTimerPanel" class="timer-panel" hidden>
+            <div class="timer-title">剩余时间</div>
+            <div id="examTimerDisplay" class="timer-display">00:00</div>
+          </div>
+
+          <!-- 统计和进度 -->
+          <div class="quiz-info-panel">
+            <h3 id="quizProgressTitle">当前进度</h3>
+            <p id="quizProgressText">-- / --</p>
+            <p id="quizCorrectRateText">正确率: --</p>
+          </div>
+
+          <!-- 答题卡 -->
+          <div class="answer-card-panel">
+            <h3>答题卡</h3>
+            <div id="answerCard" class="answer-card"></div>
+          </div>
+
+          <button id="submitExamButton" class="submit-exam-btn" type="button" hidden>
+            交卷并查看分数
+          </button>
+        </aside>
+
+        <!-- 核心做题面板 -->
+        <main class="quiz-panel">
+          <div class="question-meta" id="questionMeta"></div>
+          <h2 id="questionText" class="question-text">加载中...</h2>
+          <div id="optionsList" class="options-list"></div>
+
+          <!-- 确认答案按钮 (仅多选题练习模式显示) -->
+          <button id="confirmAnswerBtn" class="confirm-answer-btn" type="button" hidden>确认答案</button>
+
+          <!-- 解析面板 -->
+          <section id="feedbackPanel" class="feedback-panel" hidden></section>
+          
+          <div class="quiz-actions">
+            <button id="prevButton" type="button">上一题</button>
+            <button id="removeWrongButton" class="remove-wrong-btn" type="button" hidden>移出错题</button>
+            <button id="nextButton" type="button">下一题</button>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- 测验配置选项对话框 -->
+    <div id="configModal" class="modal-dialog" hidden>
+      <div class="modal-card">
+        <h2 id="configModalTitle">配置测验参数</h2>
+        <div class="config-form-item">
+          <label for="configQuestionSize">题量设定：</label>
+          <select id="configQuestionSize">
+            <option value="10">10 题</option>
+            <option value="20" selected>20 题</option>
+            <option value="40">40 题</option>
+          </select>
+        </div>
+        <div id="configTimeFormItem" class="config-form-item" hidden>
+          <label for="configTimeLimit">限时长度：</label>
+          <select id="configTimeLimit">
+            <option value="15">15 分钟</option>
+            <option value="30" selected>30 分钟</option>
+            <option value="45">45 分钟</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button id="cancelConfigBtn" class="secondary-button" type="button">取消</button>
+          <button id="startQuizBtn" class="primary-button" type="button">开始作答</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 考试结果结算弹窗 -->
+    <section id="resultDialog" class="result-dialog" hidden>
+      <div class="result-card">
+        <button id="closeResultBtn" class="close-result" type="button" aria-label="关闭">×</button>
+        <h2>测验分析报告</h2>
+        <div class="result-score-block">
+          <div class="score-circle">
+            <span id="resultScore">0</span>
+            <span class="score-label">分</span>
+          </div>
+          <p id="resultFeedbackText">答对 -- 题，答错 -- 题</p>
+        </div>
+        <h3>错题分析</h3>
+        <ol id="wrongList" class="wrong-list"></ol>
+      </div>
+    </section>
+  </body>
+</html>
