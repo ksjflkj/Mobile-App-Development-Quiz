@@ -1,16 +1,16 @@
 /* 主题与系统变量 */
 :root {
-  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+  --font-main: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   
   /* 浅色主题变量 */
-  --bg-app: #f4f6f9;
-  --bg-card: #ffffff;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --border-color: #e2e8f0;
+  --bg-app: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(226, 232, 240, 0.8);
   
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
   --primary-soft: #eff6ff;
   
   --success: #10b981;
@@ -21,35 +21,35 @@
   --warning: #f97316;
   --warning-soft: #fff7ed;
   
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  --hover-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   
-  --radius: 12px;
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 深色主题覆盖 */
 [data-theme="dark"] {
-  --bg-app: #0f172a;
-  --bg-card: #1e293b;
+  --bg-app: #080d16;
+  --bg-card: rgba(15, 23, 42, 0.65);
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --border-color: #334155;
+  --border-color: rgba(51, 65, 85, 0.5);
   
-  --primary: #3b82f6;
-  --primary-hover: #60a5fa;
-  --primary-soft: #172554;
+  --primary: #38bdf8;
+  --primary-hover: #0ea5e9;
+  --primary-soft: rgba(14, 165, 233, 0.15);
   
   --success: #34d399;
-  --success-soft: #064e3b;
+  --success-soft: rgba(52, 211, 153, 0.15);
   --error: #f87171;
-  --error-soft: #4a0404;
+  --error-soft: rgba(248, 113, 113, 0.15);
   
   --warning: #fb923c;
-  --warning-soft: #431407;
+  --warning-soft: rgba(251, 146, 60, 0.15);
   
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-  --hover-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -64,6 +64,52 @@ body {
   font-family: var(--font-main);
   transition: background-color 0.3s, color 0.3s;
   line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 背景流光装饰 */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(130px);
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.45;
+  transition: opacity 0.5s;
+}
+
+[data-theme="dark"] .bg-glow {
+  opacity: 0.2;
+}
+
+.bg-glow-1 {
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--primary), transparent 70%);
+  animation: floatGlow1 25s infinite alternate ease-in-out;
+}
+
+.bg-glow-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, var(--warning), transparent 70%);
+  animation: floatGlow2 20s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlow1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(8%, 10%) scale(1.1); }
+}
+
+@keyframes floatGlow2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-10%, -8%) scale(1.05); }
 }
 
 button, select {
@@ -84,6 +130,7 @@ button, select {
   background-color: var(--bg-card);
   border-bottom: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
+  backdrop-filter: blur(12px);
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -142,6 +189,7 @@ button, select {
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--card-shadow);
+  backdrop-filter: blur(16px);
   transition: var(--transition);
 }
 
@@ -245,6 +293,7 @@ button, select {
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--card-shadow);
+  backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -327,6 +376,7 @@ button, select {
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--card-shadow);
+  backdrop-filter: blur(16px);
 }
 
 .back-home-btn {
@@ -497,6 +547,7 @@ button, select {
   border-radius: var(--radius);
   padding: 36px;
   box-shadow: var(--card-shadow);
+  backdrop-filter: blur(16px);
 }
 
 .question-meta {
@@ -538,6 +589,41 @@ button, select {
   transform: translateX(4px);
   border-color: var(--primary);
   box-shadow: var(--hover-shadow);
+}
+
+.option-button strong {
+  background-color: var(--bg-app);
+  color: var(--text-secondary);
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-right: 12px;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  display: inline-block;
+}
+
+.option-button:hover strong {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.option-button.is-selected strong {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.option-button.is-correct strong {
+  background-color: var(--success);
+  color: #ffffff;
+  border-color: var(--success);
+}
+
+.option-button.is-wrong strong {
+  background-color: var(--error);
+  color: #ffffff;
+  border-color: var(--error);
 }
 
 .option-button.is-selected {
