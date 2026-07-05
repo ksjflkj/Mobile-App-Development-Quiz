@@ -567,26 +567,8 @@
       localStorage.removeItem(progressStorageKey);
       localStorage.removeItem("mobile-quiz-last-score");
       
-      // 重置内存状态
-      state.wrongIds = new Set();
-      state.progress = {};
-      state.lastScoreText = "暂无记录";
-      
-      // 如果当前正处于答题界面，重置答题状态并返回首页
-      if (!elements.quizView.hidden) {
-        clearInterval(state.timerId);
-        state.answersById = {};
-        state.checkedById = {};
-        state.currentIndex = 0;
-        state.examSubmitted = false;
-        elements.resultDialog.hidden = true;
-        elements.examTimerPanel.hidden = true;
-        showView("dashboard");
-      } else {
-        render();
-      }
-      
       alert("记录已成功清空！");
+      window.location.reload();
     });
 
     // 首页卡片及按钮
