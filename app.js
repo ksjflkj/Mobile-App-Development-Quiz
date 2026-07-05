@@ -464,12 +464,14 @@
       }
 
       state.checkedById[question.id] = true;
-      // 自动计入错题本
+      // 自动移出/记入错题本
       const isCorrect = window.QuizCore.isAnswerCorrect(state.answersById[question.id], question.answer);
-      if (!isCorrect) {
+      if (isCorrect) {
+        state.wrongIds.delete(question.id);
+      } else {
         state.wrongIds.add(question.id);
-        saveWrongIds();
       }
+      saveWrongIds();
     }
 
     render();
@@ -623,12 +625,14 @@
       if (!question) return;
 
       state.checkedById[question.id] = true;
-      // 自动计入错题本
+      // 自动移出/记入错题本
       const isCorrect = window.QuizCore.isAnswerCorrect(state.answersById[question.id] || [], question.answer);
-      if (!isCorrect) {
+      if (isCorrect) {
+        state.wrongIds.delete(question.id);
+      } else {
         state.wrongIds.add(question.id);
-        saveWrongIds();
       }
+      saveWrongIds();
 
       render();
     });
