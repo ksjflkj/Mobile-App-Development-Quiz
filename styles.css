@@ -754,6 +754,31 @@ button, select {
   vertical-align: middle;
 }
 
+.question-mode-inline-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.mode-practice-badge {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+}
+
+.mode-study-badge {
+  background-color: var(--success-soft);
+  color: var(--success);
+}
+
+.mode-exam-badge {
+  background-color: var(--warning-soft);
+  color: var(--warning);
+}
+
 /* 底部按钮 */
 .quiz-actions {
   display: flex;

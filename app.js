@@ -304,7 +304,13 @@
       return;
     }
 
-    elements.questionMeta.textContent = `${question.set} · 第 ${state.currentIndex + 1} / ${state.session.length} 题`;
+    const modeClass = state.mode === "study" ? "mode-study-badge" : (state.mode === "exam" ? "mode-exam-badge" : "mode-practice-badge");
+    const modeText = state.mode === "study" ? "📖 背题模式" : (state.mode === "exam" ? "⏱️ 限时测验" : "✍️ 练习模式");
+    elements.questionMeta.innerHTML = `
+      <span>${escapeHtml(question.set)}</span> · 
+      <span>第 ${state.currentIndex + 1} / ${state.session.length} 题</span> · 
+      <span class="question-mode-inline-badge ${modeClass}">${modeText}</span>
+    `;
     
     // 在题目前面添加醒目的题目类型 badge 标签
     const typeBadge = `<span class="question-type-inline-badge">${typeLabels[question.type]}</span>`;
@@ -652,7 +658,14 @@
 
     elements.startQuizBtn.addEventListener("click", () => {
       elements.configModal.hidden = true;
-      state.examConfig.limit = Number(elements.configQuestionSize.value);
+      
+      const sizeVal = elements.configQuestionSize.value;
+      state.examConfig.limit = sizeVal === "all" ? null : Number(sizeVal);
+      
+      if (state.mode !== "exam") {
+        state.mode = elements.configQuizMode.value;
+      }
+      
       if (state.mode === "exam") {
         state.examConfig.time = Number(elements.configTimeLimit.value);
       }
