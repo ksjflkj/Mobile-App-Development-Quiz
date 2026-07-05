@@ -438,8 +438,8 @@
   function selectAnswer(question, optionKey) {
     if (state.examSubmitted) return;
 
-    // 如果是练习模式下的多选题，且已经提交过答案，则不能再修改
-    if (state.mode === "practice" && question.type === "multiple" && state.checkedById[question.id]) return;
+    // 如果是练习模式，且该题已经判过题，则不允许再修改答案
+    if (state.mode === "practice" && state.checkedById[question.id]) return;
 
     const currentAnswers = new Set(state.answersById[question.id] || []);
     if (question.type === "multiple") {
