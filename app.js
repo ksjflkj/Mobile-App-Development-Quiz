@@ -625,11 +625,8 @@
       }
       state.mode = "practice";
       state.scope = { type: "wrong", setName: null };
-      elements.configModalTitle.textContent = "错题复习设定";
-      elements.configModeFormItem.hidden = false;
-      elements.configTimeFormItem.hidden = true;
-      elements.configQuestionSize.value = "all"; // 默认选择全部错题
-      elements.configModal.hidden = false;
+      state.examConfig.limit = null; // 默认选择全部题目
+      startSession();
     });
 
     // 首页进入特定单元
@@ -639,11 +636,8 @@
       const setName = btn.dataset.setName;
       state.mode = "practice";
       state.scope = { type: "set", setName: setName };
-      elements.configModalTitle.textContent = `单元测试设定: ${setName}`;
-      elements.configModeFormItem.hidden = false;
-      elements.configTimeFormItem.hidden = true;
-      elements.configQuestionSize.value = "all"; // 默认选择整单元全部题目
-      elements.configModal.hidden = false;
+      state.examConfig.limit = null; // 默认选择整单元全部题目
+      startSession();
     });
 
     // 快速开始选项
