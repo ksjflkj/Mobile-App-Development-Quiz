@@ -70,6 +70,8 @@
       // 配置模态框
       configModal: document.querySelector("#configModal"),
       configModalTitle: document.querySelector("#configModalTitle"),
+      configModeFormItem: document.querySelector("#configModeFormItem"),
+      configQuizMode: document.querySelector("#configQuizMode"),
       configQuestionSize: document.querySelector("#configQuestionSize"),
       configTimeFormItem: document.querySelector("#configTimeFormItem"),
       configTimeLimit: document.querySelector("#configTimeLimit"),
@@ -159,6 +161,22 @@
         const recordText = `测验未交卷 (已答 ${answered}/${total} 题)`;
         localStorage.setItem("mobile-quiz-last-score", recordText);
       }
+      return;
+    }
+
+    if (state.mode === "study") {
+      // 背题模式记录
+      const scopeName = state.scope.type === "set" 
+        ? state.scope.setName 
+        : (state.scope.type === "wrong" ? "错题复习" : "随机背题");
+        
+      let recordText = "";
+      if (isFinished || state.currentIndex === total - 1) {
+        recordText = `背题完成: ${scopeName} (共 ${total} 题)`;
+      } else {
+        recordText = `背题中: ${scopeName} (已看 ${state.currentIndex + 1}/${total} 题)`;
+      }
+      localStorage.setItem("mobile-quiz-last-score", recordText);
       return;
     }
 
@@ -293,7 +311,7 @@
     elements.questionText.innerHTML = `${typeBadge}${escapeHtml(question.question)}`;
 
     const selected = new Set(state.answersById[question.id] || []);
-    const checked = state.examSubmitted || Boolean(state.checkedById[question.id]);
+    const checked = state.examSubmitted || Boolean(state.checkedById[question.id]) || (state.mode === "study");
     
     elements.optionsList.innerHTML = question.options
       .map((option) => {
@@ -302,7 +320,7 @@
         const wrong = checked && active && !question.answer.includes(option.key);
         
         return `
-          <button class="option-button ${active ? "is-selected" : ""} ${correct ? "is-correct" : ""} ${wrong ? "is-wrong" : ""}" data-option="${escapeHtml(option.key)}" type="button">
+          <button class="option-button ${active ? "is-selected" : ""} ${correct ? "is-correct" : ""} ${wrong ? "is-wrong" : ""}" data-option="${escapeHtml(option.key)}" type="button" ${state.mode === "study" ? "disabled" : ""}>
             <strong>${escapeHtml(option.key)}.</strong> ${escapeHtml(option.text)}
           </button>
         `;
@@ -310,11 +328,14 @@
       .join("");
 
     if (checked) {
-      const ok = window.QuizCore.isAnswerCorrect(state.answersById[question.id] || [], question.answer);
+      const ok = state.mode === "study" ? true : window.QuizCore.isAnswerCorrect(state.answersById[question.id] || [], question.answer);
       elements.feedbackPanel.hidden = false;
       elements.feedbackPanel.className = `feedback-panel ${ok ? "is-correct" : "is-wrong"}`;
+      
+      const titleText = state.mode === "study" ? "💡 答案与解析" : (ok ? "🎉 回答正确" : "❌ 回答错误");
+      
       elements.feedbackPanel.innerHTML = `
-        <h4>${ok ? "🎉 回答正确" : "❌ 回答错误"}</h4>
+        <h4>${titleText}</h4>
         <p><strong>正确答案：</strong>${escapeHtml(answerText(question))}</p>
         <p><strong>解析：</strong>${escapeHtml(question.explanation || "暂无解析")}</p>
       `;
@@ -333,14 +354,15 @@
 
     elements.prevButton.disabled = state.currentIndex === 0;
     
-    // 如果是练习模式，且在最后一题，将“下一题”变为“完成练习”按钮以引导返回首页
-    if (state.mode === "practice" && state.currentIndex === state.session.length - 1) {
-      elements.nextButton.textContent = "完成练习";
+    // 如果是练习或背题模式，且在最后一题，将“下一题”变为“完成学习”按钮以引导返回首页
+    const isLastQuestion = state.currentIndex === state.session.length - 1;
+    if ((state.mode === "practice" || state.mode === "study") && isLastQuestion) {
+      elements.nextButton.textContent = state.mode === "study" ? "完成背题" : "完成练习";
       elements.nextButton.disabled = false;
       elements.nextButton.classList.add("finish-practice-btn");
     } else {
       elements.nextButton.textContent = "下一题";
-      elements.nextButton.disabled = state.currentIndex >= state.session.length - 1;
+      elements.nextButton.disabled = isLastQuestion;
       elements.nextButton.classList.remove("finish-practice-btn");
     }
 
@@ -349,10 +371,10 @@
 
   // 3. 渲染侧边栏和答题卡
   function renderSidebar() {
-    elements.quizProgressTitle.textContent = state.mode === "practice" ? "练习进度" : "答题卡进度";
+    elements.quizProgressTitle.textContent = state.mode === "practice" ? "练习进度" : (state.mode === "study" ? "背题进度" : "答题卡进度");
     const totalCount = state.session.length;
-    const answeredCount = Object.keys(state.answersById).length;
-    elements.quizProgressText.textContent = `${answeredCount} / ${totalCount} 题`;
+    const answeredCount = state.mode === "study" ? (state.currentIndex + 1) : Object.keys(state.answersById).length;
+    elements.quizProgressText.textContent = state.mode === "study" ? `第 ${answeredCount} / ${totalCount} 题` : `${answeredCount} / ${totalCount} 题`;
 
     // 计算正确率 (仅限练习模式下)
     if (state.mode === "practice" && answeredCount > 0) {
@@ -383,12 +405,19 @@
         const isAnswered = (state.answersById[question.id] || []).length > 0;
         
         let stateClass = "";
-        if (isAnswered) stateClass = "is-answered";
-        
-        // 练习模式下直观展示对错
-        if (state.mode === "practice" && state.checkedById[question.id]) {
-          const isCorrect = window.QuizCore.isAnswerCorrect(state.answersById[question.id] || [], question.answer);
-          stateClass = isCorrect ? "practice-correct" : "practice-wrong";
+        if (state.mode === "study") {
+          // 背题模式下：已浏览过的题目高亮
+          if (index <= state.currentIndex) {
+            stateClass = "is-answered";
+          }
+        } else {
+          if (isAnswered) stateClass = "is-answered";
+          
+          // 练习模式下直观展示对错
+          if (state.mode === "practice" && state.checkedById[question.id]) {
+            const isCorrect = window.QuizCore.isAnswerCorrect(state.answersById[question.id] || [], question.answer);
+            stateClass = isCorrect ? "practice-correct" : "practice-wrong";
+          }
         }
 
         return `
@@ -415,7 +444,7 @@
       scope: state.scope.type === "wrong" ? "wrong" : (state.scope.type === "set" ? "set" : "all"),
       setName: state.scope.setName,
       random: isRandom,
-      limit: (state.mode === "exam" || state.scope.type === "all") ? state.examConfig.limit : null,
+      limit: state.examConfig.limit || null,
       wrongIds: [...state.wrongIds],
     });
 
@@ -437,6 +466,9 @@
 
   function selectAnswer(question, optionKey) {
     if (state.examSubmitted) return;
+
+    // 如果是背题模式，直接忽略任何点击操作
+    if (state.mode === "study") return;
 
     // 如果是练习模式，且该题已经判过题，则不允许再修改答案
     if (state.mode === "practice" && state.checkedById[question.id]) return;
@@ -573,9 +605,17 @@
 
     // 首页卡片及按钮
     elements.wrongCardButton.addEventListener("click", () => {
+      const maxWrong = state.wrongIds.size;
+      if (maxWrong === 0) {
+        alert("您的错题本还是空的，快去练习吧！");
+        return;
+      }
       state.mode = "practice";
       state.scope = { type: "wrong", setName: null };
-      startSession();
+      elements.configModalTitle.textContent = "错题复习设定";
+      elements.configModeFormItem.hidden = false;
+      elements.configTimeFormItem.hidden = true;
+      elements.configModal.hidden = false;
     });
 
     // 首页进入特定单元
@@ -657,9 +697,10 @@
     });
 
     elements.nextButton.addEventListener("click", () => {
-      if (state.mode === "practice" && state.currentIndex === state.session.length - 1) {
+      if ((state.mode === "practice" || state.mode === "study") && state.currentIndex === state.session.length - 1) {
         saveSessionRecord(true);
-        alert("恭喜，您已完成本轮练习！已更新备考状态记录。");
+        const modeLabel = state.mode === "study" ? "背题" : "练习";
+        alert(`恭喜，您已完成本轮${modeLabel}！已更新备考状态记录。`);
         showView("dashboard");
         return;
       }

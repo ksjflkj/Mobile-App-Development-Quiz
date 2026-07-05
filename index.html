@@ -133,12 +133,20 @@
     <div id="configModal" class="modal-dialog" hidden>
       <div class="modal-card">
         <h2 id="configModalTitle">配置测验参数</h2>
+        <div id="configModeFormItem" class="config-form-item">
+          <label for="configQuizMode">学习模式：</label>
+          <select id="configQuizMode">
+            <option value="practice" selected>✍️ 练习模式 (答题后看解析)</option>
+            <option value="study">📖 背题模式 (直接看答案解析)</option>
+          </select>
+        </div>
         <div class="config-form-item">
           <label for="configQuestionSize">题量设定：</label>
           <select id="configQuestionSize">
             <option value="10">10 题</option>
             <option value="20" selected>20 题</option>
             <option value="40">40 题</option>
+            <option value="all">全部题目</option>
           </select>
         </div>
         <div id="configTimeFormItem" class="config-form-item" hidden>
