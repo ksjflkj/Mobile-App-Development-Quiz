@@ -25,6 +25,8 @@
     timerId: null,             // 倒计时定时器
     timeLeft: 0,               // 倒计时剩余秒数
     lastScoreText: "",         // 最近一次考试记录
+    autoNext: localStorage.getItem("mobile-quiz-auto-next") === "true", // 自动下一题
+    autoNextTimeoutId: null,   // 自动下一题延时器ID
   };
 
   // DOM 元素引用
@@ -136,6 +138,13 @@
     return state.session[state.currentIndex] || null;
   }
 
+  function clearAutoNextTimeout() {
+    if (state.autoNextTimeoutId) {
+      clearTimeout(state.autoNextTimeoutId);
+      state.autoNextTimeoutId = null;
+    }
+  }
+
   function resetSessionState() {
     state.answersById = {};
     state.checkedById = {};
@@ -143,6 +152,7 @@
     state.examSubmitted = false;
     elements.resultDialog.hidden = true;
     clearInterval(state.timerId);
+    clearAutoNextTimeout();
     elements.examTimerPanel.hidden = true;
     elements.submitExamButton.hidden = true;
   }
@@ -313,10 +323,16 @@
     const attrs = isClickable ? 'id="modeSwitchBtn" class="question-mode-inline-badge ' + modeClass + '" title="点击切换答题/背题模式" type="button"' : 'class="question-mode-inline-badge ' + modeClass + '"';
     const switchIcon = isClickable ? ' <span style="font-size:10px;opacity:0.8;margin-left:2px;">⇄</span>' : '';
     
+    const autoNextClass = state.autoNext ? "auto-next-on" : "auto-next-off";
+    const autoNextText = state.autoNext ? "自动下一题: 开" : "自动下一题: 关";
+    const autoNextBtnHtml = state.mode === "practice" 
+      ? ` · <button id="autoNextToggleBtn" class="question-mode-inline-badge ${autoNextClass}" type="button" title="答对后自动切换到下一题">${autoNextText}</button>`
+      : "";
+      
     elements.questionMeta.innerHTML = `
       <span>${escapeHtml(question.set)}</span> · 
       <span>第 ${state.currentIndex + 1} / ${state.session.length} 题</span> · 
-      <${tag} ${attrs}>${modeText}${switchIcon}</${tag}>
+      <${tag} ${attrs}>${modeText}${switchIcon}</${tag}>${autoNextBtnHtml}
     `;
     
     // 在题目前面添加醒目的题目类型 badge 标签
@@ -486,6 +502,9 @@
     // 如果是练习模式，且该题已经判过题，则不允许再修改答案
     if (state.mode === "practice" && state.checkedById[question.id]) return;
 
+    // 每次选择前，先清除可能存在的自动下一题延时器
+    clearAutoNextTimeout();
+
     const currentAnswers = new Set(state.answersById[question.id] || []);
     if (question.type === "multiple") {
       if (currentAnswers.has(optionKey)) {
@@ -518,6 +537,14 @@
         state.wrongIds.add(question.id);
       }
       saveWrongIds();
+
+      // 单选题/判断题答对后，若开启了“自动下一题”，则自动在 1 秒后跳转下一题
+      if (isCorrect && state.autoNext && state.currentIndex < state.session.length - 1) {
+        state.autoNextTimeoutId = setTimeout(() => {
+          state.currentIndex++;
+          render();
+        }, 1000);
+      }
     }
 
     render();
@@ -684,19 +711,28 @@
 
     // 答题操作区
     elements.backToHomeBtn.addEventListener("click", () => {
+      clearAutoNextTimeout();
       clearInterval(state.timerId);
       saveSessionRecord(false);
       showView("dashboard");
     });
 
-    // 顶部模式快捷切换
+    // 顶部模式快捷切换 与 自动下一题切换
     elements.questionMeta.addEventListener("click", (event) => {
-      const btn = event.target.closest("#modeSwitchBtn");
-      if (!btn) return;
-      if (state.mode === "exam") return;
+      const modeBtn = event.target.closest("#modeSwitchBtn");
+      const autoNextBtn = event.target.closest("#autoNextToggleBtn");
       
-      state.mode = state.mode === "practice" ? "study" : "practice";
-      render();
+      if (modeBtn) {
+        if (state.mode === "exam") return;
+        clearAutoNextTimeout();
+        state.mode = state.mode === "practice" ? "study" : "practice";
+        render();
+      } else if (autoNextBtn) {
+        clearAutoNextTimeout();
+        state.autoNext = !state.autoNext;
+        localStorage.setItem("mobile-quiz-auto-next", state.autoNext);
+        render();
+      }
     });
 
     elements.optionsList.addEventListener("click", (event) => {
@@ -711,6 +747,7 @@
       const question = getCurrentQuestion();
       if (!question) return;
 
+      clearAutoNextTimeout();
       state.checkedById[question.id] = true;
       // 自动移出/记入错题本
       const isCorrect = window.QuizCore.isAnswerCorrect(state.answersById[question.id] || [], question.answer);
@@ -721,15 +758,25 @@
       }
       saveWrongIds();
 
+      // 多选题答对后，若开启了“自动下一题”，则自动在 1 秒后跳转下一题
+      if (isCorrect && state.autoNext && state.currentIndex < state.session.length - 1) {
+        state.autoNextTimeoutId = setTimeout(() => {
+          state.currentIndex++;
+          render();
+        }, 1000);
+      }
+
       render();
     });
 
     elements.prevButton.addEventListener("click", () => {
+      clearAutoNextTimeout();
       state.currentIndex = Math.max(0, state.currentIndex - 1);
       render();
     });
 
     elements.nextButton.addEventListener("click", () => {
+      clearAutoNextTimeout();
       if ((state.mode === "practice" || state.mode === "study") && state.currentIndex === state.session.length - 1) {
         saveSessionRecord(true);
         const modeLabel = state.mode === "study" ? "背题" : "练习";
@@ -744,6 +791,7 @@
     elements.removeWrongButton.addEventListener("click", () => {
       const question = getCurrentQuestion();
       if (!question) return;
+      clearAutoNextTimeout();
       state.wrongIds.delete(question.id);
       saveWrongIds();
       if (state.scope.type === "wrong") {
@@ -756,6 +804,7 @@
     elements.answerCard.addEventListener("click", (event) => {
       const btn = event.target.closest("button[data-index]");
       if (!btn) return;
+      clearAutoNextTimeout();
       state.currentIndex = Number(btn.dataset.index);
       render();
     });

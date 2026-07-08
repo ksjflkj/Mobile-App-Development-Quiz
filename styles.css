@@ -793,6 +793,26 @@ button.question-mode-inline-badge:hover {
   color: var(--warning);
 }
 
+.auto-next-on {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  color: var(--success) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+.auto-next-on:hover {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+.auto-next-off {
+  background-color: rgba(148, 163, 184, 0.12) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.auto-next-off:hover {
+  background-color: rgba(148, 163, 184, 0.2) !important;
+}
+
 /* 底部按钮 */
 .quiz-actions {
   display: flex;
